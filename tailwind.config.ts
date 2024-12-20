@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      scale: {
+        "65": "0.65",
+        "55": "0.55",
+      },
       colors: {
         primary: "#ec2128",
         secondary: "#f4ac1d",

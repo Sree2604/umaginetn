@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+
+import header2 from "@/public/3.png";
 import header from "@/public/umagine 25 microsite-11.png";
 
 const targetDate = new Date("2025-01-09T00:00:00");
@@ -40,8 +42,8 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="relative w-full bg-[#d7d7d7] min-h-screen flex items-center">
-      <div className="absolute left-24 max-w-[420px] flex flex-col justify-center items-start gap-10 w-full z-10">
+    <div className="relative w-full bg-[#d7d7d7] min-h-screen flex md:items-center overflow-hidden">
+      <div className="absolute lg:left-24 flex flex-col justify-center items-start gap-10 w-full z-10 scale-55 md:scale-65 lg:scale-100">
         <p className="flex justify-center items-center gap-2 text-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,11 +84,20 @@ export default function Header() {
             <span className="text-xs font-semibold">SECONDS</span>
           </p>
         </div>
-        <button className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out mt-8">
+        <button className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out mt-8">
           Get Registration Now!
         </button>
       </div>
-      <Image src={header} alt="header" className="w-full object-cover h-full" />
+      <Image
+        src={header}
+        alt="header"
+        className="w-full object-cover h-full hidden md:block"
+      />
+      <Image
+        src={header2}
+        alt="header"
+        className="w-full object-cover h-full md:hidden"
+      />
     </div>
   );
 }

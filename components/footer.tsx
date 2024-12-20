@@ -92,7 +92,7 @@ export default function Footer() {
   ];
 
   return (
-    <div className="text-white relative flex flex-col justify-around items-center">
+    <div className="text-white relative flex flex-col justify-around items-center overflow-hidden w-full">
       <div className="absolute w-full h-full -z-30">
         <Image src={bg2} alt="background" className="h-1/2" />
         <Image src={bg1} alt="background" className="h-1/2" />
@@ -115,12 +115,12 @@ export default function Footer() {
           />
         </svg>
 
-        <button className="p-2 px-4 bg-primary hover:bg-secondary rounded font-semibold transition-colors duration-200 ease-in-out mt-8">
+        <button className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded font-semibold transition-colors duration-200 ease-in-out mt-8">
           Register Now!
         </button>
       </div>
-      <div className="w-full md:w-4/5 p-3 bg-secondary rounded flex gap-3 z-10">
-        <div className="max-w-80 flex flex-col gap-4 items-center">
+      <div className="w-full md:w-4/5 p-3 bg-secondary rounded flex flex-col md:flex-row justify-center items-center gap-3 z-10">
+        <div className="max-w-96 md:max-w-80 flex flex-col gap-4 items-center">
           <h5 className="font-bold text-3xl text-center">Venue</h5>
           <Image src={Venue} alt="venue" className="rounded" />
           <p className="flex flex-col">
@@ -137,7 +137,7 @@ export default function Footer() {
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46473.55342003622!2d80.14643088500641!3d12.986407372415599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526734ffcb019d%3A0xb4e49a3ed028b70c!2sCHENNAI%20TRADE%20CENTRE%2C%20Nandambakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600089!5e0!3m2!1sen!2sin!4v1734681613114!5m2!1sen!2sin"
-          className="w-full rounded"
+          className="w-full rounded h-96 hidden md:block"
           loading="lazy"
         ></iframe>
       </div>
