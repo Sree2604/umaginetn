@@ -8,7 +8,7 @@ export default function Navbar() {
   const menuRef = useRef<HTMLDivElement | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  let lastScrollY = useRef(0);
+  const lastScrollY = useRef(0);
 
   const routes = [
     { name: "Home", path: "/" },
