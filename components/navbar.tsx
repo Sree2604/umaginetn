@@ -3,6 +3,9 @@
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import Logo from "@/public/logo.png";
+import Image from "next/image";
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -57,10 +60,10 @@ export default function Navbar() {
           scrolled
             ? "fixed top-0 left-0 w-full z-50 bg-white shadow-md"
             : "relative md:absolute w-full"
-        } transform transition-transform duration-500 ease-in-out`}
+        } transform transition-transform duration-500 ease-in-out z-50`}
       >
         <div className="flex justify-around items-center py-4">
-          <div className="font-bold text-lg">UmagneTN</div>
+          <Image src={Logo} alt="logo" className="h-12 w-44" />
           <ul className="hidden md:flex items-center gap-8">
             {routes.map(({ name, path }) => (
               <li
@@ -80,7 +83,12 @@ export default function Navbar() {
               </button>
             </li>
           </ul>
-          <div className="md:hidden" onClick={toggleMenu}>
+          <div
+            className={`md:hidden p-2 rounded bg-primary text-white transition-all duration-200 ease-in-out ${
+              menuOpen ? "border-2 border-red-400" : ""
+            }`}
+            onClick={toggleMenu}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -99,7 +107,7 @@ export default function Navbar() {
         </div>
       </div>
       <div
-        className={`md:hidden fixed top-16 left-1/2 w-5/6 transform -translate-x-1/2 bg-white p-5 rounded shadow-lg transition-transform duration-500 ease-in-out ${
+        className={`md:hidden fixed top-24 left-1/2 w-5/6 z-50 transform -translate-x-1/2 bg-white p-5 rounded shadow-lg transition-transform duration-500 ease-in-out ${
           menuOpen ? "translate-y-0 opacity-100" : "-translate-y-72 opacity-0"
         }`}
       >
