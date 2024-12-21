@@ -5,6 +5,8 @@ import SocialGallery from "./_homepage/social-gallery";
 import KeyTracks from "./_homepage/key-tracks";
 import ScrollUp from "@/components/scroll-up";
 import EventSpeakers from "./_homepage/event-speakers";
+import AcceleratingTN from "./_homepage/accelerating-tn";
+import SocialMedia from "@/components/social-media";
 
 export default function Home() {
   return (
@@ -12,7 +14,9 @@ export default function Home() {
       <Navbar />
       <Header />
       <KeyTracks />
+      <AcceleratingTN />
       <EventSpeakers />
+      <SocialMedia />
       <SocialGallery />
       <Footer />
       <ScrollUp />

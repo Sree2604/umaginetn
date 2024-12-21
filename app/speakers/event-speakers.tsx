@@ -55,7 +55,7 @@ export default function EventSpeakers() {
             className="flex flex-col items-center transition-all duration-200 ease-in-out"
           >
             <div
-              className="relative group flex justify-center items-center text-primary"
+              className="relative group flex justify-center items-center text-primary cursor-pointer"
               onClick={() => NavigateSpeaker(speaker.name)}
             >
               <Image

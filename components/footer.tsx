@@ -1,4 +1,10 @@
-import { facebookLink, instagramLink, twitterLink, youtubeLink } from "@/links";
+import {
+  facebookLink,
+  instagramLink,
+  registrationLink,
+  twitterLink,
+  youtubeLink,
+} from "@/links";
 import Image from "next/image";
 
 import Venue from "@/public/venue.jpg";
@@ -115,9 +121,13 @@ export default function Footer() {
           />
         </svg>
 
-        <button className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded font-semibold transition-colors duration-200 ease-in-out mt-8">
+        <a
+          href={registrationLink}
+          target="_blank"
+          className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded font-semibold transition-colors duration-200 ease-in-out mt-8"
+        >
           Register Now!
-        </button>
+        </a>
       </div>
       <div className="w-full md:w-4/5 p-3 bg-secondary rounded flex flex-col md:flex-row justify-center items-center gap-3 z-10">
         <div className="max-w-96 md:max-w-80 flex flex-col gap-4 items-center">

@@ -59,9 +59,9 @@ export default function Navbar() {
         ref={menuRef}
         className={`${
           scrolled
-            ? "fixed top-0 left-0 w-full z-40 bg-white text-black shadow-md"
+            ? "fixed top-0 left-0 w-full bg-white text-black shadow-md"
             : "relative md:absolute w-full"
-        } transform transition-transform duration-500 ease-in-out z-50`}
+        } transform transition-transform duration-500 ease-in-out z-40`}
       >
         <div className="flex justify-around items-center py-4">
           <Image src={Logo} alt="logo" className="h-12 w-44" />

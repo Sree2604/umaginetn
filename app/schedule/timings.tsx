@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import speaker1 from "@/public/speaker1.jpg";
+import speaker from "@/public/speaker.png";
 
 export default function Timings() {
   const timingDay1 = [
@@ -9,7 +9,7 @@ export default function Timings() {
       timing: "9.30-10.30AM",
       name: "Lucy Melisa",
       role: "Founder, Edilta",
-      photo: speaker1,
+      photo: speaker,
       heading: "Marketing Matters!",
       passage:
         "How you transform your business as technology, consumer habits, and industry dynamics change? Find out from those leading the charge.",
@@ -18,7 +18,7 @@ export default function Timings() {
       timing: "11.00-12.00PM",
       name: "John Doe",
       role: "CEO, Innovate",
-      photo: speaker1,
+      photo: speaker,
       heading: "Future of Tech",
       passage:
         "Explore cutting-edge technology trends and how they impact industries worldwide.",
@@ -30,7 +30,7 @@ export default function Timings() {
       timing: "10.00-11.00AM",
       name: "Sophia Green",
       role: "CTO, CreativeLabs",
-      photo: speaker1,
+      photo: speaker,
       heading: "Designing for Impact",
       passage:
         "Discover how thoughtful design can create meaningful experiences for users and businesses.",
@@ -39,7 +39,7 @@ export default function Timings() {
       timing: "2.00-3.00PM",
       name: "Chris Brown",
       role: "Founder, StartUpX",
-      photo: speaker1,
+      photo: speaker,
       heading: "Building Resilient Teams",
       passage:
         "Learn strategies to build teams that thrive in challenging environments.",
