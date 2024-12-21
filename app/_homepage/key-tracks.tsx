@@ -10,7 +10,7 @@ export default function KeyTracks() {
       <h3 className="text-2xl font-bold">
         Key <span className="text-primary">Tracks</span>
       </h3>
-      <div className="flex flex-col md:flex-row gap-3 items-center md:items-stretch justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 place-content-center place-items-center">
         <AnimateUp>
           <div className="rounded-xl shadow-lg w-72 flex flex-col gap-3">
             <div className="w-full rounded-t-xl bg-primary text-white p-3 font-semibold">

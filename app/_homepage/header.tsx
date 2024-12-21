@@ -43,9 +43,9 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="relative w-full flex flex-col md:flex-row items-center">
-      <div className="flex flex-col justify-center items-center gap-4 md:gap-8 lg:gap-12 w-full md:w-1/2">
-        <p className="flex justify-center items-center gap-2 text-lg scale-75 md:scale-100">
+    <div className="relative w-full flex flex-col-reverse md:flex-row items-center">
+      <div className="flex flex-col justify-center items-center gap-4 md:gap-8 lg:gap-12 w-full md:w-1/2 overflow-hidden">
+        <p className="flex justify-center items-center gap-2 text-lg scale-85 md:scale-100 pt-[80px] sm:pt-[60px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -62,12 +62,12 @@ export default function Header() {
           </svg>
           <span>Jan 09 - 10, 2025</span>
         </p>
-        <h1 className="flex flex-col gap-3 text-2xl md:text-4xl lg:text-6xl font-bold text-primary">
+        <h1 className="flex flex-col gap-3 text-3xl md:text-4xl lg:text-6xl font-bold text-primary">
           <span>Embark on a</span>
           <span>Journey of</span>
           <span>Transformation</span>
         </h1>
-        <div className="flex gap-8 text-primary scale-55 md:scale-65 lg:scale-100">
+        <div className="flex gap-8 text-primary scale-65 lg:scale-100">
           <p className="flex flex-col items-center justify-center border-[5px] border-yellow-400 border-dashed rounded-full size-20">
             <span className="text-2xl font-bold">{timeLeft.days}</span>
             <span className="text-xs font-semibold">DAYS</span>

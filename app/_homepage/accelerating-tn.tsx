@@ -22,7 +22,7 @@ export default function AcceleratingTN() {
           for e-governance, and leveraging Geomatics for sustainability.
         </p>
       </div>
-      <AnimateUp direction={"left"}>
+      <AnimateUp>
         <Image
           src={tn}
           alt="TN-Img"

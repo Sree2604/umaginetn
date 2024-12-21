@@ -13,6 +13,7 @@ const config: Config = {
         myraidpro: ['"Myraid Pro"', "sans-serif"], // Assuming MyraidPro-Regular.otf is a valid font
       },
       scale: {
+        85: "0.85",
         65: "0.65",
         55: "0.55",
       },
