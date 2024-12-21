@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "FSP DEMO Neometric Alt Black";
+  src: url("/fonts/Fontspring-DEMO-neometricalt-black.otf") format("opentype"),
+    url("/fonts/MyraidPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

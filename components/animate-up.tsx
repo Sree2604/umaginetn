@@ -3,9 +3,13 @@ import React, { useEffect, useRef, useState } from "react";
 
 interface AnimateUpProps {
   children: React.ReactNode;
+  direction?: "up" | "down" | "left" | "right";
 }
 
-export default function AnimateUp({ children }: AnimateUpProps) {
+export default function AnimateUp({
+  children,
+  direction = "up",
+}: AnimateUpProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -33,14 +37,27 @@ export default function AnimateUp({ children }: AnimateUpProps) {
     };
   }, []);
 
+  const getTransform = () => {
+    switch (direction) {
+      case "up":
+        return isVisible ? "translate-y-0" : "translate-y-32";
+      case "down":
+        return isVisible ? "translate-y-0" : "-translate-y-32";
+      case "left":
+        return isVisible ? "translate-x-0" : "translate-x-32";
+      case "right":
+        return isVisible ? "translate-x-0" : "-translate-x-32";
+      default:
+        return "translate-y-0"; // Default to "up" if no valid direction is passed
+    }
+  };
+
   return (
     <div
       ref={ref}
       className={`transition-transform duration-1000 ease-out ${
-        isVisible
-          ? "transform translate-y-0 opacity-100"
-          : "transform translate-y-32 opacity-0"
-      }`}
+        isVisible ? "opacity-100" : "opacity-0"
+      } ${getTransform()}`}
     >
       {children}
     </div>
