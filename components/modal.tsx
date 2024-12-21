@@ -8,7 +8,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
   const onDismiss = useCallback(() => {
-    router.back();
+    router.push("/speakers");
   }, [router]);
 
   const onClick: MouseEventHandler = useCallback(
@@ -35,7 +35,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
   return (
     <div
       ref={overlay}
-      className="fixed z-40 left-0 right-0 top-0 bottom-0 mx-auto bg-black/60 p-2"
+      className="fixed z-50 left-0 right-0 top-0 bottom-0 mx-auto bg-black/60 p-2"
       onClick={onClick}
     >
       <div

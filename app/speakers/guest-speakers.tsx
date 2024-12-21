@@ -4,7 +4,7 @@ import Image from "next/image";
 import speaker from "@/public/speaker.png";
 import { useRouter } from "next/navigation";
 
-export default function EventSpeakers() {
+export default function GuestSpeakers() {
   const nav = useRouter();
   const speakers = [
     {
@@ -27,16 +27,6 @@ export default function EventSpeakers() {
       photo: speaker,
       role: "CTO-CreativeLabs",
     },
-    {
-      name: "Chris Green",
-      photo: speaker,
-      role: "Marketing Head",
-    },
-    {
-      name: "Sophia Lee",
-      photo: speaker,
-      role: "Product Manager",
-    },
   ];
 
   const NavigateSpeaker = (name: string) => {
@@ -46,7 +36,7 @@ export default function EventSpeakers() {
   return (
     <div className="flex flex-col gap-5 my-8 w-5/6 mx-auto text-center">
       <h3 className="text-3xl font-bold">
-        Event <span className="text-primary">Speakers</span>
+        Guest <span className="text-primary">Speakers</span>
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center">
         {speakers.map((speaker, index) => (
