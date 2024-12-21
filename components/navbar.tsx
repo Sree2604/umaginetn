@@ -17,6 +17,7 @@ export default function Navbar() {
   const routes = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Gallery", path: "/gallery" },
     { name: "Speakers", path: "/speakers" },
     { name: "Partners", path: "/partners" },
     { name: "Agenda", path: "/agenda" },
@@ -66,7 +67,7 @@ export default function Navbar() {
       >
         <div className="flex justify-around items-center py-1">
           <Image src={Logo} alt="logo" className="h-18 w-56" />
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-4 lg:gap-8">
             {routes.map(({ name, path }) => (
               <li
                 key={name}
