@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import bg from "@/public/tp_Bg.png";
-import tn from "@/public/TN.png";
-import experience from "@/public/experience.png";
-import platform from "@/public/platformImg.png";
-import convergence from "@/public/convergence.png";
-import phoneExperience from "@/public/phoneExpe.png";
+import bg from "@/public/tp_Bg.webp";
+import tn from "@/public/TN.webp";
+import experience from "@/public/experience.webp";
+import platform from "@/public/platformImg.webp";
+import convergence from "@/public/convergence.webp";
+import phoneExperience from "@/public/phoneExpe.webp";
 
 import Navbar from "@/components/navbar";
 import ScrollUp from "@/components/scroll-up";

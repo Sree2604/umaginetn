@@ -1,6 +1,6 @@
 "use client";
 import Modal from "@/components/modal";
-import speaker from "@/public/speaker.png";
+import speaker from "@/public/speaker.webp";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 

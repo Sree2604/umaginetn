@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import title from "@/public/title.jpg";
+import title from "@/public/title.webp";
 
 export default function TitleBar({ header }: { header: string }) {
   return (

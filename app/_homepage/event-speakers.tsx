@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import speaker from "@/public/speaker.png";
+import speaker from "@/public/speaker.webp";
 import { useRouter } from "next/navigation";
 
 export default function EventSpeakers() {

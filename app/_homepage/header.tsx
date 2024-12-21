@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import header1 from "@/public/header1.png";
-import header2 from "@/public/header2.png";
+import header2 from "@/public/header2.webp";
 
 const targetDate = new Date("2025-01-09T00:00:00");
 
@@ -42,9 +42,9 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="relative w-full flex flex-col md:flex-row items-center">
-      <div className="flex flex-col justify-center items-center gap-4 md:gap-8 lg:gap-12 w-full md:w-1/2">
-        <p className="flex justify-center items-center gap-2 text-lg scale-75 md:scale-100">
+    <div className="relative w-full  flex flex-col-reverse md:flex-row items-center">
+      <div className="flex flex-col  justify-center items-center gap-4 md:gap-8 lg:gap-12 w-full md:w-1/2">
+        <p className="flex justify-center pt-[80px] sm:pt-[60px] items-center gap-2 text-lg scale-75 md:scale-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -97,7 +97,10 @@ export default function Header() {
       <Image
         src={header1}
         alt="header"
+        width={713}
+        height={768}
         className="w-full md:w-1/2 object-cover h-full"
+        priority
       />
     </div>
   );

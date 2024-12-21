@@ -1,9 +1,9 @@
 import { facebookLink, instagramLink, twitterLink, youtubeLink } from "@/links";
 import Image from "next/image";
 
-import Venue from "@/public/venue.jpg";
-import bg1 from "@/public/umagine 25 microsite-25.png";
-import bg2 from "@/public/umagine 25 microsite-26.png";
+import Venue from "@/public/venue.webp";
+import bg1 from "@/public/umagine 25 microsite-25.webp";
+import bg2 from "@/public/umagine 25 microsite-26.webp";
 
 export default function Footer() {
   const routes = [
@@ -139,6 +139,7 @@ export default function Footer() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46473.55342003622!2d80.14643088500641!3d12.986407372415599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526734ffcb019d%3A0xb4e49a3ed028b70c!2sCHENNAI%20TRADE%20CENTRE%2C%20Nandambakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600089!5e0!3m2!1sen!2sin!4v1734681613114!5m2!1sen!2sin"
           className="w-full rounded h-96 hidden md:block"
           loading="lazy"
+          title="Google Map showing Chennai Trade Centre, Nandambakkam, Chennai, Tamil Nadu"
         ></iframe>
       </div>
       <div className="flex flex-col items-center gap-8 z-10 p-8">
@@ -148,12 +149,18 @@ export default function Footer() {
               key={index}
               className="border-2 border-white p-1 rounded-full hover:bg-primary"
             >
-              <a href={path} target="_blank">
-                {name}
+              <a
+                href={path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              >
+                <span className="sr-only">{name}</span> {name}
               </a>
             </li>
           ))}
         </ul>
+
         <ul className="flex gap-5">
           {routes.map(({ name, path }) => (
             <li key={name} className="hover:text-primary font-semibold">

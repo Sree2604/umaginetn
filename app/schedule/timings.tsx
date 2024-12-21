@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import speaker1 from "@/public/speaker1.jpg";
+import speaker1 from "@/public/speaker1.webp";
 
 export default function Timings() {
   const timingDay1 = [

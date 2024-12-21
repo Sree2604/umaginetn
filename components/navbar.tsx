@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import Logo from "@/public/logo.png";
+import Logo from "@/public/logo.webp";
 import Image from "next/image";
 
 export default function Navbar() {

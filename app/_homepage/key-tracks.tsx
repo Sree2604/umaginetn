@@ -1,6 +1,6 @@
-import key1 from "@/public/key1.svg";
-import key2 from "@/public/key2.svg";
-import key3 from "@/public/key3.svg";
+import key1 from "@/public/key1.webp";
+import key2 from "@/public/key2.webp";
+import key3 from "@/public/key3.webp";
 import Image from "next/image";
 
 export default function KeyTracks() {

@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import Gallery1 from "@/public/gallery1.jpg";
-import Gallery2 from "@/public/gallery2.jpg";
-import Gallery3 from "@/public/gallery3.jpg";
+import Gallery1 from "@/public/gallery1.webp";
+import Gallery2 from "@/public/gallery2.webp";
+import Gallery3 from "@/public/gallery3.webp";
 
 export default function SocialGallery() {
   return (
