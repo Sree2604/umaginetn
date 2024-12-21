@@ -18,7 +18,8 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Speakers", path: "/speakers" },
-    { name: "Schedule", path: "/schedule" },
+    { name: "Partners", path: "/partners" },
+    { name: "Agenda", path: "/agenda" },
   ];
 
   const controlNavbar = useCallback(() => {
@@ -63,8 +64,8 @@ export default function Navbar() {
             : "relative md:absolute w-full"
         } transform transition-transform duration-500 ease-in-out z-40`}
       >
-        <div className="flex justify-around items-center py-4">
-          <Image src={Logo} alt="logo" className="h-12 w-44" />
+        <div className="flex justify-around items-center py-2">
+          <Image src={Logo} alt="logo" className="h-18 w-56" />
           <ul className="hidden md:flex items-center gap-8">
             {routes.map(({ name, path }) => (
               <li
