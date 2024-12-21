@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import Logo from "@/public/logo.png";
 import Image from "next/image";
+import { registrationLink } from "@/links";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -78,9 +79,13 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <button className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out">
+              <a
+                href={registrationLink}
+                target="_blank"
+                className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out"
+              >
                 Register
-              </button>
+              </a>
             </li>
           </ul>
           <div
