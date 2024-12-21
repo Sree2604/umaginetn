@@ -1,47 +1,42 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 
-import speaker1 from "@/public/speaker1.jpg";
+import speaker from "@/public/speaker.png";
+import { useRouter } from "next/navigation";
 
 export default function EventSpeakers() {
+  const nav = useRouter();
   const speakers = [
     {
       name: "James Killer",
-      photo: speaker1,
+      photo: speaker,
       role: "Founder-Edita",
     },
     {
       name: "Jane Doe",
-      photo: speaker1,
+      photo: speaker,
       role: "Co-Founder-TechWave",
     },
     {
       name: "Alice Smith",
-      photo: speaker1,
+      photo: speaker,
       role: "CEO-Innovate",
     },
     {
       name: "Robert Brown",
-      photo: speaker1,
+      photo: speaker,
       role: "CTO-CreativeLabs",
-    },
-    {
-      name: "Chris Green",
-      photo: speaker1,
-      role: "Marketing Head",
-    },
-    {
-      name: "Sophia Lee",
-      photo: speaker1,
-      role: "Product Manager",
     },
   ];
 
-  const [showAll, setShowAll] = useState(false);
+  const Navigate = () => {
+    nav.push("/speakers");
+  };
 
-  const visibleSpeakers = showAll ? speakers : speakers.slice(0, 4);
+  const NavigateSpeaker = (name: string) => {
+    nav.push(`/speakers/${name}`);
+  };
 
   return (
     <div className="flex flex-col gap-5 my-6 w-5/6 mx-auto">
@@ -49,12 +44,15 @@ export default function EventSpeakers() {
         Event <span className="text-primary">Speakers</span>
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center">
-        {visibleSpeakers.map((speaker, index) => (
+        {speakers.map((speaker, index) => (
           <div
             key={index}
             className="flex flex-col items-center hover:opacity-60 transition-all duration-200 ease-in-out"
           >
-            <div className="relative group flex justify-center items-center text-primary">
+            <div
+              className="relative group flex justify-center items-center text-primary"
+              onClick={() => NavigateSpeaker(speaker.name)}
+            >
               <Image
                 src={speaker.photo}
                 alt={speaker.name}
@@ -82,15 +80,12 @@ export default function EventSpeakers() {
           </div>
         ))}
       </div>
-      {/* Show More / Show Less Button */}
-      {speakers.length > 4 && (
-        <button
-          onClick={() => setShowAll((prev) => !prev)}
-          className="mx-auto px-4 py-2 bg-primary text-white font-bold rounded-md hover:bg-primary-dark transition-all duration-200 ease-in-out"
-        >
-          {showAll ? "Show Less" : "Show All"}
-        </button>
-      )}
+      <button
+        onClick={Navigate}
+        className="mx-auto px-4 py-2 bg-primary text-white font-bold rounded-md hover:bg-primary-dark transition-all duration-200 ease-in-out"
+      >
+        View All
+      </button>
     </div>
   );
 }

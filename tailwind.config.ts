@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,9 +8,13 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        neometric: ['"FSP DEMO Neometric Alt Black"', "sans-serif"], // Correctly set fallback
+        myraidpro: ['"Myraid Pro"', "sans-serif"], // Assuming MyraidPro-Regular.otf is a valid font
+      },
       scale: {
-        "65": "0.65",
-        "55": "0.55",
+        65: "0.65",
+        55: "0.55",
       },
       colors: {
         primary: "#ec2128",
@@ -19,4 +23,6 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;

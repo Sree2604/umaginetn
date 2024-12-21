@@ -58,7 +58,7 @@ export default function Navbar() {
         ref={menuRef}
         className={`${
           scrolled
-            ? "fixed top-0 left-0 w-full z-50 bg-white shadow-md"
+            ? "fixed top-0 left-0 w-full z-40 bg-white text-black shadow-md"
             : "relative md:absolute w-full"
         } transform transition-transform duration-500 ease-in-out z-50`}
       >
@@ -70,9 +70,9 @@ export default function Navbar() {
                 key={name}
                 className={`${
                   pathname === path
-                    ? "text-primary font-semibold"
+                    ? "text-primary "
                     : "text-gray-700 hover:text-primary"
-                } transition-colors duration-200`}
+                } transition-colors font-semibold duration-200`}
               >
                 <a href={path}>{name}</a>
               </li>
@@ -107,7 +107,7 @@ export default function Navbar() {
         </div>
       </div>
       <div
-        className={`md:hidden fixed top-24 left-1/2 w-5/6 z-50 transform -translate-x-1/2 bg-white p-5 rounded shadow-lg transition-transform duration-500 ease-in-out ${
+        className={`md:hidden fixed top-24 left-1/2 w-11/12 z-40 transform -translate-x-1/2 bg-white p-5 rounded shadow-lg transition-transform duration-500 ease-in-out ${
           menuOpen ? "translate-y-0 opacity-100" : "-translate-y-72 opacity-0"
         }`}
       >
