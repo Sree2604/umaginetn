@@ -1,17 +1,23 @@
-import { facebookLink, instagramLink, twitterLink, youtubeLink } from "@/links";
+import {
+  facebookLink,
+  instagramLink,
+  registrationLink,
+  twitterLink,
+  youtubeLink,
+} from "@/links";
 import Image from "next/image";
 
+<<<<<<< HEAD
 import Venue from "@/public/venue.webp";
 import bg1 from "@/public/umagine 25 microsite-25.webp";
 import bg2 from "@/public/umagine 25 microsite-26.webp";
+=======
+import Venue from "@/public/venue.jpg";
+import bg1 from "@/public/footer.jpg";
+import bg2 from "@/public/umagine 25 microsite-26.png";
+>>>>>>> b65a75364120e761fc74927b257b665c10296313
 
 export default function Footer() {
-  const routes = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Speakers", path: "/speakers" },
-    { name: "Schedule", path: "/schedule" },
-  ];
   const links = [
     {
       name: (
@@ -94,10 +100,10 @@ export default function Footer() {
   return (
     <div className="text-white relative flex flex-col justify-around items-center overflow-hidden w-full">
       <div className="absolute w-full h-full -z-30">
-        <Image src={bg2} alt="background" className="h-1/2" />
-        <Image src={bg1} alt="background" className="h-1/2" />
+        <Image src={bg1} alt="background" className="h-1/2 w-full" />
+        <Image src={bg2} alt="background" className="h-1/2 w-full" />
       </div>
-      <div className="z-10 text-2xl font-bold flex flex-col items-center p-8">
+      <div className="z-10 text-2xl font-bold flex flex-col items-center p-8 text-black">
         <p>Hurry Up</p>
         <p>Book your Tickets</p>
         <svg
@@ -115,22 +121,27 @@ export default function Footer() {
           />
         </svg>
 
-        <button className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded font-semibold transition-colors duration-200 ease-in-out mt-8">
+        <a
+          href={registrationLink}
+          target="_blank"
+          className="p-2 px-4 text-lg bg-primary text-white hover:bg-secondary rounded font-semibold transition-colors duration-200 ease-in-out mt-8"
+        >
           Register Now!
-        </button>
+        </a>
       </div>
-      <div className="w-full md:w-4/5 p-3 bg-secondary rounded flex flex-col md:flex-row justify-center items-center gap-3 z-10">
+      <div className="w-full md:w-4/5 p-3 bg-gray-100 text-black rounded flex flex-col md:flex-row justify-center items-center gap-3 z-10">
         <div className="max-w-96 md:max-w-80 flex flex-col gap-4 items-center">
-          <h5 className="font-bold text-3xl text-center">Venue</h5>
           <Image src={Venue} alt="venue" className="rounded" />
           <p className="flex flex-col">
-            <span className="font-semibold text-lg">Chennai Trade Centre</span>
+            <span className="font-semibold text-lg">
+              VENUE - Chennai Trade Centre
+            </span>
             <span>Nandambakkam, Nandambakkam, Tamil Nadu - 600089, India</span>
           </p>
           <a
             href="https://maps.app.goo.gl/7xZANUjJjTBxzJ3L9"
             target="_blank"
-            className="p-2 px-4 bg-primary hover:bg-secondary border-2 border-primary rounded font-semibold transition-colors duration-200 ease-in-out"
+            className="p-2 px-4 bg-primary text-white hover:bg-secondary border-2 border-primary rounded font-semibold transition-colors duration-200 ease-in-out"
           >
             Get Directions
           </a>
@@ -160,6 +171,7 @@ export default function Footer() {
             </li>
           ))}
         </ul>
+<<<<<<< HEAD
 
         <ul className="flex gap-5">
           {routes.map(({ name, path }) => (
@@ -168,6 +180,8 @@ export default function Footer() {
             </li>
           ))}
         </ul>
+=======
+>>>>>>> b65a75364120e761fc74927b257b665c10296313
         <p>@2025 Umagine. All rights reserved</p>
       </div>
     </div>

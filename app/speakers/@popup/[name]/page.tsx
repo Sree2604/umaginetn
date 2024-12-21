@@ -60,11 +60,15 @@ export default function SpeakerPage() {
         <Image
           src={speakerDetails.photo}
           alt={speakerDetails.name}
-          className="size-72"
+          className="size-72 rounded-l"
         />
         <div className="text-center p-3">
           <h2 className="font-bold text-2xl">{speakerDetails.name}</h2>
-          <p>{speakerDetails.role}</p>
+          <p className="text-primary">{speakerDetails.role}</p>
+          <p>
+            Join us in shaping the future of technology, entrepreneurship, and
+            talent mobility, contributing to the global wave of innovation.
+          </p>
         </div>
       </div>
     </Modal>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import speaker from "@/public/speaker.webp";
 import { useRouter } from "next/navigation";
+import AnimateUp from "@/components/animate-up";
 
 export default function GuestSpeakers() {
   const nav = useRouter();
@@ -40,39 +41,38 @@ export default function GuestSpeakers() {
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center">
         {speakers.map((speaker, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center transition-all duration-200 ease-in-out"
-          >
-            <div
-              className="relative group flex justify-center items-center text-primary"
-              onClick={() => NavigateSpeaker(speaker.name)}
-            >
-              <Image
-                src={speaker.photo}
-                alt={speaker.name}
-                width={200}
-                height={200}
-                className="rounded-full group-hover:opacity-60"
-              />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-8 absolute hidden group-hover:block"
+          <AnimateUp key={index}>
+            <div className="flex flex-col items-center transition-all duration-200 ease-in-out">
+              <div
+                className="relative group flex justify-center items-center text-primary cursor-pointer"
+                onClick={() => NavigateSpeaker(speaker.name)}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 4.5v15m7.5-7.5h-15"
+                <Image
+                  src={speaker.photo}
+                  alt={speaker.name}
+                  width={200}
+                  height={200}
+                  className="rounded-full group-hover:opacity-60"
                 />
-              </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-8 absolute hidden group-hover:block"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </div>
+              <h4 className="font-bold text-2xl">{speaker.name}</h4>
+              <p className="text-sm text-primary">{speaker.role}</p>
             </div>
-            <h4 className="font-bold text-2xl">{speaker.name}</h4>
-            <p className="text-sm">{speaker.role}</p>
-          </div>
+          </AnimateUp>
         ))}
       </div>
     </div>

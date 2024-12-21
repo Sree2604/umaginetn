@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import Logo from "@/public/logo.webp";
 import Image from "next/image";
+import { registrationLink } from "@/links";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -58,9 +59,9 @@ export default function Navbar() {
         ref={menuRef}
         className={`${
           scrolled
-            ? "fixed top-0 left-0 w-full z-40 bg-white text-black shadow-md"
+            ? "fixed top-0 left-0 w-full bg-white text-black shadow-md"
             : "relative md:absolute w-full"
-        } transform transition-transform duration-500 ease-in-out z-50`}
+        } transform transition-transform duration-500 ease-in-out z-40`}
       >
         <div className="flex justify-around items-center py-4">
           <Image src={Logo} alt="logo" className="h-12 w-44" />
@@ -78,9 +79,13 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <button className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out">
+              <a
+                href={registrationLink}
+                target="_blank"
+                className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out"
+              >
                 Register
-              </button>
+              </a>
             </li>
           </ul>
           <div

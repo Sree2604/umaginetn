@@ -1,4 +1,4 @@
-export const registrationLink = "https://www.umaginetn.com/";
+export const registrationLink = "https://www.umaginetn.com/#/buyTickets";
 
 export const facebookLink = " https://www.facebook.com/umaginetn";
 

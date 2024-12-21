@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import header1 from "@/public/header1.png";
-import header2 from "@/public/header2.webp";
+import header2 from "@/public/header2.png";
+import { registrationLink } from "@/links";
 
 const targetDate = new Date("2025-01-09T00:00:00");
 
@@ -84,9 +85,13 @@ export default function Header() {
             <span className="text-xs font-semibold">SECONDS</span>
           </p>
         </div>
-        <button className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out scale-75 md:scale-100">
+        <a
+          href={registrationLink}
+          target="_blank"
+          className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out scale-75 md:scale-100"
+        >
           Get Registration Now!
-        </button>
+        </a>
 
         <Image
           src={header2}

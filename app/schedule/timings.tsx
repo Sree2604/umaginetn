@@ -1,7 +1,12 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+<<<<<<< HEAD
 import speaker1 from "@/public/speaker1.webp";
+=======
+import speaker from "@/public/speaker.png";
+import AnimateUp from "@/components/animate-up";
+>>>>>>> b65a75364120e761fc74927b257b665c10296313
 
 export default function Timings() {
   const timingDay1 = [
@@ -9,7 +14,7 @@ export default function Timings() {
       timing: "9.30-10.30AM",
       name: "Lucy Melisa",
       role: "Founder, Edilta",
-      photo: speaker1,
+      photo: speaker,
       heading: "Marketing Matters!",
       passage:
         "How you transform your business as technology, consumer habits, and industry dynamics change? Find out from those leading the charge.",
@@ -18,7 +23,7 @@ export default function Timings() {
       timing: "11.00-12.00PM",
       name: "John Doe",
       role: "CEO, Innovate",
-      photo: speaker1,
+      photo: speaker,
       heading: "Future of Tech",
       passage:
         "Explore cutting-edge technology trends and how they impact industries worldwide.",
@@ -30,7 +35,7 @@ export default function Timings() {
       timing: "10.00-11.00AM",
       name: "Sophia Green",
       role: "CTO, CreativeLabs",
-      photo: speaker1,
+      photo: speaker,
       heading: "Designing for Impact",
       passage:
         "Discover how thoughtful design can create meaningful experiences for users and businesses.",
@@ -39,7 +44,7 @@ export default function Timings() {
       timing: "2.00-3.00PM",
       name: "Chris Brown",
       role: "Founder, StartUpX",
-      photo: speaker1,
+      photo: speaker,
       heading: "Building Resilient Teams",
       passage:
         "Learn strategies to build teams that thrive in challenging environments.",
@@ -65,22 +70,26 @@ export default function Timings() {
         </p>
       </div>
       <div className="flex justify-center items-center mb-8 font-bold scale-75 md:scale-100">
-        <div
-          onClick={() => setSelectedDay(1)}
-          className={`size-44 rounded-full flex justify-center items-center cursor-pointer ${
-            selectedDay === 1 ? "bg-primary text-white" : "bg-gray-200"
-          }`}
-        >
-          9th Jan 2025
-        </div>
-        <div
-          onClick={() => setSelectedDay(2)}
-          className={`size-44 rounded-full flex justify-center items-center cursor-pointer -translate-x-4 -translate-y-4 ${
-            selectedDay === 2 ? "bg-secondary text-white" : "bg-gray-200"
-          }`}
-        >
-          10th Jan 2025
-        </div>
+        <AnimateUp direction="left">
+          <div
+            onClick={() => setSelectedDay(1)}
+            className={`size-44 rounded-full flex justify-center items-center cursor-pointer ${
+              selectedDay === 1 ? "bg-primary text-white" : "bg-gray-200"
+            }`}
+          >
+            9th Jan 2025
+          </div>
+        </AnimateUp>
+        <AnimateUp direction="right">
+          <div
+            onClick={() => setSelectedDay(2)}
+            className={`size-44 rounded-full flex justify-center items-center cursor-pointer -translate-x-4 -translate-y-4 ${
+              selectedDay === 2 ? "bg-secondary text-white" : "bg-gray-200"
+            }`}
+          >
+            10th Jan 2025
+          </div>
+        </AnimateUp>
       </div>
       <div>
         <table className="table-auto w-full text-left border-collapse">
@@ -119,6 +128,29 @@ export default function Timings() {
             ))}
           </tbody>
         </table>
+      </div>
+      {/* Sticky Bottom Buttons */}
+      <div className="flex justify-center gap-4 my-5">
+        <button
+          onClick={() => setSelectedDay(1)}
+          className={`px-4 py-2 rounded-md font-bold ${
+            selectedDay === 1
+              ? "bg-primary text-white"
+              : "bg-gray-200 hover:bg-gray-300"
+          }`}
+        >
+          Day 1
+        </button>
+        <button
+          onClick={() => setSelectedDay(2)}
+          className={`px-4 py-2 rounded-md font-bold ${
+            selectedDay === 2
+              ? "bg-secondary text-white"
+              : "bg-gray-200 hover:bg-gray-300"
+          }`}
+        >
+          Day 2
+        </button>
       </div>
     </div>
   );
