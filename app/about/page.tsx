@@ -16,7 +16,6 @@ export default function Page() {
     <>
       <Navbar />
       <div className="relative w-full sm:w-11/12 h-[60vh] sm:h-full lg:h-screen bg-cover bg-center flex items-center justify-center mx-auto">
-        {/* Mobile Image */}
         <div className="relative w-full h-full sm:hidden mb-10">
           <Image
             src={phoneExperience}
@@ -27,7 +26,6 @@ export default function Page() {
           />
         </div>
 
-        {/* Desktop Image */}
         <div className="relative w-full h-full hidden sm:block">
           <Image
             src={experience}
@@ -91,8 +89,8 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="relative h-auto py-10 bg-cover bg-[#ebb043] bg-center flex flex-col-reverse sm:flex-row items-center justify-center mb-10 sm:px-20">
-        <div className="text-white w-1/2 px-4 sm:px-10 mt-6 sm:mt-0 text-center sm:text-left">
+      <div className="relative h-auto py-10 bg-cover bg-center flex flex-col-reverse sm:flex-row items-center justify-center mb-10 sm:px-20">
+        <div className="text-black w-1/2 px-4 sm:px-10 mt-6 sm:mt-0 text-center sm:text-left">
           <h1 className="text-4xl font-bold mb-4">
             Convergence of Visionaries & Experts:
           </h1>
