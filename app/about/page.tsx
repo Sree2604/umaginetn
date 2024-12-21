@@ -29,7 +29,7 @@ export default function Page() {
       >
         <div className="text-white w-[40%] px-5">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-            Accelerating Tamil Nadu's Tech Progression!
+            Accelerating Tamil Nadu&lsquo;s Tech Progression!
           </h1>
           <p className="text-lg sm:text-xl">
             AT&lsquo;TN is not just a theme; it&lsquo;s a reinforcement for Tech
