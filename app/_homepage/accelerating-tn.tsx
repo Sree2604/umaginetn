@@ -5,10 +5,10 @@ import tn from "@/public/TN.png";
 export default function AcceleratingTN() {
   return (
     <div
-      className="relative h-auto py-10 bg-cover bg-center flex items-center justify-center mb-10 sm:px-20"
+      className="relative h-auto py-8 p-2 bg-cover bg-center flex flex-col md:flex-row items-center justify-center mb-10 sm:px-20"
       style={{ backgroundImage: `url(${bg.src})` }}
     >
-      <div className="text-white w-[40%] px-5">
+      <div className="text-white w-full md:w-1/2">
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
           Accelerating Tamil Nadu&lsquo;s Tech Progression!
         </h1>
@@ -21,15 +21,13 @@ export default function AcceleratingTN() {
           for e-governance, and leveraging Geomatics for sustainability.
         </p>
       </div>
-      <div>
-        <Image
-          src={tn}
-          alt="TN-Img"
-          width={450}
-          height={450}
-          className="rounded-lg shadow-lg"
-        />
-      </div>
+      <Image
+        src={tn}
+        alt="TN-Img"
+        width={450}
+        height={450}
+        className="rounded-lg shadow-lg"
+      />
     </div>
   );
 }

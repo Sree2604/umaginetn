@@ -100,8 +100,8 @@ export default function Footer() {
   return (
     <div className="text-white relative flex flex-col justify-around items-center overflow-hidden w-full">
       <div className="absolute w-full h-full -z-30">
-        <Image src={bg2} alt="background" className="h-1/2" />
-        <Image src={bg1} alt="background" className="h-1/2" />
+        <Image src={bg2} alt="background" className="h-1/2 w-full" />
+        <Image src={bg1} alt="background" className="h-1/2 w-full" />
       </div>
       <div className="z-10 text-2xl font-bold flex flex-col items-center p-8">
         <p>Hurry Up</p>
