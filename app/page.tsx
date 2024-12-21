@@ -15,8 +15,8 @@ export default function Home() {
       <Header />
       <KeyTracks />
       <AcceleratingTN />
-      <EventSpeakers />
       <SocialMedia />
+      <EventSpeakers />
       <SocialGallery />
       <Footer />
       <ScrollUp />

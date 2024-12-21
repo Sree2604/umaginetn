@@ -3,6 +3,7 @@ import Image from "next/image";
 import socialmedia from "@/public/socialmedia.jpg";
 
 import { facebookLink, instagramLink, twitterLink, youtubeLink } from "@/links";
+import AnimateUp from "./animate-up";
 
 export default function SocialMedia() {
   const links = [
@@ -90,19 +91,21 @@ export default function SocialMedia() {
         alt="background"
         className="absolute w-full h-full -z-10"
       />
-      <h3 className="font-semibold text-xl">FOLLUW US ON</h3>
-      <ul className="flex gap-4">
-        {links.map(({ name, path }, index) => (
-          <li
-            key={index}
-            className="border-2 border-white p-1 rounded-full hover:bg-primary"
-          >
-            <a href={path} target="_blank">
-              {name}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <h3 className="font-semibold text-xl text-primary">FOLLUW US ON</h3>
+      <AnimateUp>
+        <ul className="flex gap-4">
+          {links.map(({ name, path }, index) => (
+            <li
+              key={index}
+              className="border-2 border-white p-1 rounded-full hover:bg-primary"
+            >
+              <a href={path} target="_blank">
+                {name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </AnimateUp>
     </div>
   );
 }

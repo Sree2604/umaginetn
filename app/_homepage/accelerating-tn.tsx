@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bg from "@/public/tp_Bg.png";
 import tn from "@/public/TN.png";
+import AnimateUp from "@/components/animate-up";
 
 export default function AcceleratingTN() {
   return (
@@ -21,13 +22,15 @@ export default function AcceleratingTN() {
           for e-governance, and leveraging Geomatics for sustainability.
         </p>
       </div>
-      <Image
-        src={tn}
-        alt="TN-Img"
-        width={450}
-        height={450}
-        className="rounded-lg shadow-lg"
-      />
+      <AnimateUp direction={"left"}>
+        <Image
+          src={tn}
+          alt="TN-Img"
+          width={450}
+          height={450}
+          className="rounded-lg "
+        />
+      </AnimateUp>
     </div>
   );
 }

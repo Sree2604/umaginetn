@@ -10,14 +10,15 @@ import ScrollUp from "@/components/scroll-up";
 import Footer from "@/components/footer";
 import TitleBar from "@/components/title-bar";
 import SocialMedia from "@/components/social-media";
+import AnimateUp from "@/components/animate-up";
 
 export default function Page() {
   return (
     <>
       <Navbar />
-      <TitleBar header="AboutUs" />
+      <TitleBar header={"AboutUs"} />
       <div className="relative h-auto py-10 bg-cover bg-center flex flex-col sm:flex-row items-center justify-center mb-10 p-2 sm:px-20">
-        <div>
+        <AnimateUp direction={"right"}>
           <Image
             src={platform}
             alt="platform-Img"
@@ -25,7 +26,7 @@ export default function Page() {
             height={500}
             className="rounded-lg shadow-lg"
           />
-        </div>
+        </AnimateUp>
         <div className="text-black w-full md:w-1/2 sm:px-10 mt-6 sm:mt-0 text-center sm:text-left">
           <h1 className="text-4xl font-bold mb-4">
             Pivotal Platform for Technological Advancement
@@ -52,7 +53,7 @@ export default function Page() {
             collaborations.
           </p>
         </div>
-        <div>
+        <AnimateUp direction={"left"}>
           <Image
             src={convergence}
             alt="convergence-Img"
@@ -60,12 +61,15 @@ export default function Page() {
             height={500}
             className="rounded-lg shadow-lg"
           />
-        </div>
+        </AnimateUp>
       </div>
       <SocialMedia />
-      <div className="relative w-full sm:w-11/12 bg-cover bg-center flex items-center justify-center mx-auto my-6">
+      <div className="relative w-full sm:w-11/12 bg-cover bg-center flex flex-col items-center justify-center mx-auto my-6">
+        <h3 className="text-2xl font-bold">
+          UmagaineTN 2025 <span className="text-primary">Experience</span>
+        </h3>
         {/* Mobile Image */}
-        <div className="relative w-full h-full sm:hidden mb-10">
+        <div className="relative w-full h-full sm:hidden mb-8">
           <Image
             src={phoneExperience}
             alt="Mobile Experience Img"
@@ -75,7 +79,7 @@ export default function Page() {
         </div>
 
         {/* Desktop Image */}
-        <div className="relative w-full h-full hidden sm:block">
+        <div className="relative w-full h-full hidden sm:block my-8">
           <Image
             src={experience}
             alt="Desktop Experience Img"
