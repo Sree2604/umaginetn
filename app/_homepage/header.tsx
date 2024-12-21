@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import header2 from "@/public/3.png";
-import header from "@/public/umagine 25 microsite-11.png";
+import header1 from "@/public/header1.png";
+import header2 from "@/public/header2.png";
 
 const targetDate = new Date("2025-01-09T00:00:00");
 
@@ -42,9 +42,9 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="relative w-full bg-[#d7d7d7] min-h-screen flex md:items-center overflow-hidden">
-      <div className="absolute lg:left-24 flex flex-col justify-center items-start gap-10 w-full z-10 scale-55 md:scale-65 lg:scale-100">
-        <p className="flex justify-center items-center gap-2 text-lg">
+    <div className="relative w-full flex flex-col md:flex-row items-center">
+      <div className="flex flex-col justify-center items-center gap-4 md:gap-8 lg:gap-12 w-full md:w-1/2">
+        <p className="flex justify-center items-center gap-2 text-lg scale-75 md:scale-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -61,12 +61,12 @@ export default function Header() {
           </svg>
           <span>Jan 09 - 10, 2025</span>
         </p>
-        <h1 className="flex flex-col gap-3 text-6xl font-bold text-primary">
+        <h1 className="flex flex-col gap-3 text-2xl md:text-4xl lg:text-6xl font-bold text-primary">
           <span>Embark on a</span>
           <span>Journey of</span>
           <span>Transformation</span>
         </h1>
-        <div className="flex gap-8 text-primary">
+        <div className="flex gap-8 text-primary scale-55 md:scale-65 lg:scale-100">
           <p className="flex flex-col items-center justify-center border-[5px] border-yellow-400 border-dashed rounded-full size-20">
             <span className="text-2xl font-bold">{timeLeft.days}</span>
             <span className="text-xs font-semibold">DAYS</span>
@@ -84,19 +84,20 @@ export default function Header() {
             <span className="text-xs font-semibold">SECONDS</span>
           </p>
         </div>
-        <button className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out mt-8">
+        <button className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out scale-75 md:scale-100">
           Get Registration Now!
         </button>
+
+        <Image
+          src={header2}
+          alt="header"
+          className="absolute w-full object-cover h-full -z-10"
+        />
       </div>
       <Image
-        src={header}
+        src={header1}
         alt="header"
-        className="w-full object-cover h-full hidden md:block"
-      />
-      <Image
-        src={header2}
-        alt="header"
-        className="w-full object-cover h-full md:hidden"
+        className="w-full md:w-1/2 object-cover h-full"
       />
     </div>
   );
