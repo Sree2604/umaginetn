@@ -115,7 +115,7 @@ export default function Navbar() {
       </div>
       <div
         className={`md:hidden fixed top-24 left-1/2 w-11/12 z-40 transform -translate-x-1/2 bg-white p-5 rounded shadow-lg transition-transform duration-500 ease-in-out ${
-          menuOpen ? "translate-y-0 opacity-100" : "-translate-y-72 opacity-0"
+          menuOpen ? "translate-y-0 opacity-100" : "-translate-y-96 opacity-0"
         }`}
       >
         <ul className="flex flex-col items-center gap-4">
