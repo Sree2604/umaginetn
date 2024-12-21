@@ -5,6 +5,7 @@ import tn from "@/public/TN.png";
 import experience from "@/public/experience.png";
 import platform from "@/public/platformImg.png";
 import convergence from "@/public/convergence.png";
+import phoneExperience from "@/public/phoneExpe.png";
 
 import Navbar from "@/components/navbar";
 import ScrollUp from "@/components/scroll-up";
@@ -14,24 +15,39 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <div className="relative h-screen w-11/12 bg-cover bg-center flex items-center justify-center mx-auto">
-        <Image
-          src={experience}
-          alt="Experience Img"
-          layout="fill"
-          objectFit="contain"
-          className="z-0"
-        />
+      <div className="relative w-full sm:w-11/12 h-[60vh] sm:h-full lg:h-screen bg-cover bg-center flex items-center justify-center mx-auto">
+        {/* Mobile Image */}
+        <div className="relative w-full h-full sm:hidden mb-10">
+          <Image
+            src={phoneExperience}
+            alt="Mobile Experience Img"
+            layout="fill"
+            objectFit="contain"
+            className="z-0 transform scale-110"
+          />
+        </div>
+
+        {/* Desktop Image */}
+        <div className="relative w-full h-full hidden sm:block">
+          <Image
+            src={experience}
+            alt="Desktop Experience Img"
+            layout="fill"
+            objectFit="contain"
+            className="z-0"
+          />
+        </div>
       </div>
+
       <div
-        className="relative h-auto py-10 bg-cover bg-center flex items-center justify-center mb-10 sm:px-20"
+        className="relative h-auto py-10 bg-cover bg-center flex flex-col sm:flex-row items-center justify-center mb-10 sm:px-20"
         style={{ backgroundImage: `url(${bg.src})` }}
       >
-        <div className="text-white w-[40%] px-5">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+        <div className="text-white w-full sm:w-[40%] px-4 sm:px-5 text-center sm:text-left">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4">
             Accelerating Tamil Nadu&lsquo;s Tech Progression!
           </h1>
-          <p className="text-lg sm:text-xl">
+          <p className="text-base sm:text-xl">
             AT&lsquo;TN is not just a theme; it&lsquo;s a reinforcement for Tech
             organisations to pay attention to Tamil Nadu&lsquo;s thriving tech
             ecosystem. At UmagineTN, we are committed to propelling growth
@@ -41,7 +57,7 @@ export default function Page() {
             sustainability.
           </p>
         </div>
-        <div>
+        <div className="mt-6 sm:mt-0">
           <Image
             src={tn}
             alt="TN-Img"
@@ -51,7 +67,8 @@ export default function Page() {
           />
         </div>
       </div>
-      <div className="relative h-auto py-10 bg-cover bg-center flex items-center justify-center mb-10 sm:px-20">
+
+      <div className="relative h-auto py-10 bg-cover bg-center flex flex-col sm:flex-row items-center justify-center mb-10 sm:px-20">
         <div>
           <Image
             src={platform}
@@ -61,11 +78,11 @@ export default function Page() {
             className="rounded-lg shadow-lg"
           />
         </div>
-        <div className="text-black w-1/2 px-10">
+        <div className="text-black w-1/2 px-4 sm:px-10 mt-6 sm:mt-0 text-center sm:text-left">
           <h1 className="text-4xl font-bold mb-4">
             Pivotal Platform for Technological Advancement
           </h1>
-          <p className="text-2xl sm:text-xl">
+          <p className="text-2xl sm:text-lg">
             UmagineTN stands as an evolving platform propelling Tamil Nadu
             towards its trillion-dollar dream. Join us in shaping the future of
             technology, entrepreneurship, and talent mobility, contributing to
@@ -74,8 +91,8 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="relative h-auto py-10 bg-cover bg-[#ebb043] bg-center flex items-center justify-center mb-10 sm:px-20">
-        <div className="text-white w-1/2 px-10">
+      <div className="relative h-auto py-10 bg-cover bg-[#ebb043] bg-center flex flex-col-reverse sm:flex-row items-center justify-center mb-10 sm:px-20">
+        <div className="text-white w-1/2 px-4 sm:px-10 mt-6 sm:mt-0 text-center sm:text-left">
           <h1 className="text-4xl font-bold mb-4">
             Convergence of Visionaries & Experts:
           </h1>
@@ -98,6 +115,7 @@ export default function Page() {
           />
         </div>
       </div>
+
       <Footer />
       <ScrollUp />
     </>
