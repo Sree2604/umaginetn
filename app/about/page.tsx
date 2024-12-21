@@ -32,8 +32,8 @@ export default function Page() {
             Accelerating Tamil Nadu's Tech Progression!
           </h1>
           <p className="text-lg sm:text-xl">
-            AT'TN is not just a theme; it's a reinforcement for Tech
-            organisations to pay attention to Tamil Nadu's thriving tech
+            AT&lsquo;TN is not just a theme; it&lsquo;s a reinforcement for Tech
+            organisations to pay attention to Tamil Nadu&lsquo;s thriving tech
             ecosystem. At UmagineTN, we are committed to propelling growth
             through the adoption of compelling strategies for Start-ups,
             harnessing the power of Emerging Technologies for productivity,
@@ -83,8 +83,9 @@ export default function Page() {
             Immerse yourself in an unparalleled gathering of distinguished
             policymakers, thought leaders, CXOs, start-up mavericks, tech
             virtuosos, skill developers, academia, and representatives from
-            diverse technology sectors. UmagineTN is not just a platform; it's a
-            dynamic melting pot of ideas, insights, and collaborations.
+            diverse technology sectors. UmagineTN is not just a platform;
+            it&lsquo;s a dynamic melting pot of ideas, insights, and
+            collaborations.
           </p>
         </div>
         <div>
