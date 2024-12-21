@@ -12,12 +12,6 @@ import bg1 from "@/public/footer.jpg";
 import bg2 from "@/public/umagine 25 microsite-26.png";
 
 export default function Footer() {
-  const routes = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Speakers", path: "/speakers" },
-    { name: "Schedule", path: "/schedule" },
-  ];
   const links = [
     {
       name: (
