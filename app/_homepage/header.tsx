@@ -99,7 +99,7 @@ export default function Header() {
               href="#directions"
               className="flex justify-center items-center gap-2 text-lg scale-85 md:scale-100 hover:text-primary cursor-pointer"
             >
-              <span>Chennai Trade Center</span>
+              <span>Chennai Trade Centre</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
