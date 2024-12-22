@@ -59,20 +59,20 @@ export default function Header() {
           >
             Register Now
           </a>
-          <div className="flex gap-8 text-primary scale-65 lg:scale-100">
-            <p className="flex flex-col items-center justify-center border-[5px] border-primary border-dashed rounded-full size-20">
+          <div className="flex gap-6 text-primary scale-65 lg:scale-100">
+            <p className="flex flex-col items-center justify-center rounded-full size-20">
               <span className="text-2xl font-bold">{timeLeft.days}</span>
               <span className="text-xs font-semibold">DAYS</span>
             </p>
-            <p className="flex flex-col items-center justify-center border-[5px] border-primary border-dashed rounded-full size-20">
+            <p className="flex flex-col items-center justify-center rounded-full size-20">
               <span className="text-2xl font-bold">{timeLeft.hours}</span>
               <span className="text-xs font-semibold">HOURS</span>
             </p>
-            <p className="flex flex-col items-center justify-center border-[5px] border-primary border-dashed rounded-full size-20">
+            <p className="flex flex-col items-center justify-center rounded-full size-20">
               <span className="text-2xl font-bold">{timeLeft.minutes}</span>
               <span className="text-xs font-semibold">MINUTES</span>
             </p>
-            <p className="flex flex-col items-center justify-center border-[5px] border-primary border-dashed rounded-full size-20">
+            <p className="flex flex-col items-center justify-center rounded-full size-20">
               <span className="text-2xl font-bold">{timeLeft.seconds}</span>
               <span className="text-xs font-semibold">SECONDS</span>
             </p>
