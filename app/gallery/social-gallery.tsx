@@ -8,9 +8,9 @@ import Gallery3 from "@/public/gallery3.jpg";
 export default function SocialGallery() {
   return (
     <div className="flex flex-col gap-5 my-6 w-5/6 mx-auto overflow-hidden">
-      <h3 className="text-2xl font-bold">
+      <h2 className="text-2xl font-bold">
         Social <span className="text-primary">Gallery</span>
-      </h3>
+      </h2>
 
       <AnimateUp>
         <div className="flex flex-col md:flex-row gap-3 w-full justify-between">

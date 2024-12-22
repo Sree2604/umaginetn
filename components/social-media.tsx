@@ -24,6 +24,7 @@ export default function SocialMedia() {
         </svg>
       ),
       path: facebookLink,
+      label: "Follow us on Facebook",
     },
     {
       name: (
@@ -44,6 +45,7 @@ export default function SocialMedia() {
         </svg>
       ),
       path: instagramLink,
+      label: "Follow us on Instagram",
     },
     {
       name: (
@@ -63,6 +65,7 @@ export default function SocialMedia() {
         </svg>
       ),
       path: twitterLink,
+      label: "Follow us on Twitter",
     },
     {
       name: (
@@ -82,24 +85,31 @@ export default function SocialMedia() {
         </svg>
       ),
       path: youtubeLink,
+      label: "Follow us on YouTube",
     },
   ];
+
   return (
     <div className="w-full relative min-h-80 h-full flex flex-col items-center justify-center gap-5">
       <Image
         src={socialmedia}
-        alt="background"
+        alt="Social media background"
         className="absolute w-full h-full -z-10"
       />
-      <h3 className="font-semibold text-xl text-primary">FOLLUW US ON</h3>
+      <h2 className="font-semibold text-xl text-primary">FOLLOW US ON</h2>
       <AnimateUp>
         <ul className="flex gap-4">
-          {links.map(({ name, path }, index) => (
+          {links.map(({ name, path, label }, index) => (
             <li
               key={index}
               className="border-2 border-white p-1 rounded-full hover:bg-primary"
             >
-              <a href={path} target="_blank">
+              <a
+                href={path}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+              >
                 {name}
               </a>
             </li>

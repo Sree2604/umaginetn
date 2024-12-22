@@ -7,9 +7,9 @@ import Image from "next/image";
 export default function KeyTracks() {
   return (
     <div className="flex flex-col gap-5 my-6 w-5/6 mx-auto">
-      <h3 className="text-2xl font-bold">
+      <h2 className="text-2xl font-bold">
         Key <span className="text-primary">Tracks</span>
-      </h3>
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 place-content-center place-items-center">
         <AnimateUp>
           <div className="rounded-xl shadow-lg w-72 flex flex-col gap-3">

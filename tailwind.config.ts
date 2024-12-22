@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        neometric: ['"FSP DEMO Neometric Alt Black"', "sans-serif"], // Correctly set fallback
-        myraidpro: ['"Myraid Pro"', "sans-serif"], // Assuming MyraidPro-Regular.otf is a valid font
+        neometric: ['"FSP DEMO Neometric Alt Black"', "sans-serif"],
+        myraidpro: ['"Myraid Pro"', "sans-serif"],
       },
       scale: {
         85: "0.85",
