@@ -23,13 +23,7 @@ export default function AcceleratingTN() {
         </p>
       </div>
       <AnimateUp direction={"left"}>
-        <Image
-          src={tn}
-          alt="TN-Img"
-          width={450}
-          height={450}
-          className="rounded-lg "
-        />
+        <Image src={tn} alt="TN-Img" width={450} className="rounded-lg " />
       </AnimateUp>
     </div>
   );

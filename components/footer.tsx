@@ -123,7 +123,10 @@ export default function Footer() {
           Register Now!
         </a>
       </div>
-      <div className="w-full md:w-4/5 p-3 bg-gray-100 text-black rounded flex flex-col md:flex-row justify-center items-center gap-3 z-10">
+      <div
+        id="directions"
+        className="w-full md:w-4/5 p-3 bg-gray-100 text-black rounded flex flex-col md:flex-row justify-center items-center gap-3 z-10"
+      >
         <div className="max-w-96 md:max-w-80 flex flex-col gap-4 items-center">
           <Image src={Venue} alt="venue" className="rounded" />
           <p className="flex flex-col">

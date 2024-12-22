@@ -56,7 +56,7 @@ export default function SpeakerPage() {
 
   return (
     <Modal>
-      <div className="bg-white rounded flex flex-col md:flex-row gap-5 items-center justify-around">
+      <div className="flex flex-col md:flex-row gap-5 items-center justify-around">
         <Image
           src={speakerDetails.photo}
           alt={speakerDetails.name}
