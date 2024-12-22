@@ -1,12 +1,12 @@
 import Image from "next/image";
-import bg from "@/public/tp_Bg.png";
+import bg from "@/public/tp_Bg.jpg";
 import tn from "@/public/TN.png";
 import AnimateUp from "@/components/animate-up";
 
 export default function AcceleratingTN() {
   return (
     <div
-      className="relative h-auto py-8 p-2 bg-cover bg-center flex flex-col md:flex-row items-center justify-center mb-10 sm:px-20"
+      className="relative h-auto py-8 p-2 bg-cover bg-center flex flex-col md:flex-row items-center justify-center mb-10 sm:px-20 overflow-hidden"
       style={{ backgroundImage: `url(${bg.src})` }}
     >
       <div className="text-white w-full md:w-1/2">
@@ -22,7 +22,7 @@ export default function AcceleratingTN() {
           for e-governance, and leveraging Geomatics for sustainability.
         </p>
       </div>
-      <AnimateUp>
+      <AnimateUp direction={"left"}>
         <Image
           src={tn}
           alt="TN-Img"

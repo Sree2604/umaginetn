@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import speaker from "@/public/speaker.png";
+import speaker from "@/public/speaker.jpg";
 import AnimateUp from "@/components/animate-up";
 
 export default function Timings() {

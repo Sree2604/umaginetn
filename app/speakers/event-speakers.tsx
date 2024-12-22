@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import AnimateUp from "@/components/animate-up";
-import speaker from "@/public/speaker.png";
+import speaker from "@/public/speaker.jpg";
 
 export default function EventSpeakers() {
   const nav = useRouter();

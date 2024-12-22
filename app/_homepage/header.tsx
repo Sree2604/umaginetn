@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import header1 from "@/public/header1.png";
-import header2 from "@/public/header2.png";
+import header1 from "@/public/header1.jpg";
+import header2 from "@/public/header2.jpg";
 import { registrationLink } from "@/links";
 
 const targetDate = new Date("2025-01-09T00:00:00");

@@ -9,7 +9,7 @@ import Image from "next/image";
 
 import Venue from "@/public/venue.jpg";
 import bg1 from "@/public/footer.jpg";
-import bg2 from "@/public/umagine 25 microsite-26.png";
+import bg2 from "@/public/umagine 25 microsite-26.jpg";
 
 export default function Footer() {
   const links = [

@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import experience from "@/public/experience.png";
-import platform from "@/public/platformImg.png";
-import convergence from "@/public/convergence.png";
+import experience from "@/public/experience.jpg";
+import platform from "@/public/platformImg.jpg";
+import convergence from "@/public/convergence.jpg";
 import phoneExperience from "@/public/phoneExpe.png";
 
 import Navbar from "@/components/navbar";
@@ -17,7 +17,7 @@ export default function Page() {
     <>
       <Navbar />
       <TitleBar header={"AboutUs"} />
-      <div className="relative h-auto py-10 bg-cover bg-center flex flex-col sm:flex-row items-center justify-center mb-10 p-2 sm:px-20">
+      <div className="relative h-auto py-10 bg-cover bg-center flex flex-col sm:flex-row items-center justify-center mb-10 p-2 sm:px-20 overflow-hidden">
         <AnimateUp direction={"right"}>
           <Image
             src={platform}
@@ -41,7 +41,7 @@ export default function Page() {
           </p>
         </div>
       </div>
-      <div className="relative h-auto py-10 p-2 bg-cover bg-[#ebb043] bg-center flex flex-col-reverse sm:flex-row items-center justify-center mb-10 sm:px-20">
+      <div className="relative h-auto py-10 p-2 bg-cover bg-[#ebb043] overflow-hidden bg-center flex flex-col-reverse sm:flex-row items-center justify-center mb-10 sm:px-20">
         <div className="text-white w-full md:w-1/2 px-4 sm:px-10 mt-6 sm:mt-0 text-center sm:text-left">
           <h1 className="text-4xl font-bold mb-4 flex flex-col">
             <span>Convergence of</span>
