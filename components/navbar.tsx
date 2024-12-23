@@ -69,7 +69,11 @@ export default function Navbar() {
       >
         <div className="flex justify-around items-center py-1">
           <Image src={Logo1} alt="logo" className="h-24 w-24" />
-          <Image src={Logo3} alt="logo" className="h-14 w-44" />
+          <Image
+            src={Logo3}
+            alt="logo"
+            className="h-12 w-40 -ml-20 md:-ml-80"
+          />
           <ul className="hidden md:flex items-center gap-4 lg:gap-8">
             {routes.map(({ name, path }) => (
               <li
