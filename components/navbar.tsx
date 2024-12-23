@@ -65,57 +65,55 @@ export default function Navbar() {
           scrolled
             ? "fixed top-0 left-0 w-full bg-white text-black shadow-md"
             : "relative md:absolute w-full"
-        } transform transition-transform duration-500 ease-in-out z-40`}
+        } transform transition-transform duration-500 ease-in-out z-40 flex justify-around items-center py-1 scale-95 lg:scale-100`}
       >
-        <div className="flex justify-around items-center py-1">
-          <div className="flex flex-row items-center">
-            <Image src={Logo1} alt="logo" className="h-24 w-24" />
-            <Image src={Logo2} alt="logo" className="h-14 w-44 " />
-          </div>
-          <ul className="hidden md:flex items-center gap-4 lg:gap-8">
-            {routes.map(({ name, path }) => (
-              <li
-                key={name}
-                className={`${
-                  pathname === path
-                    ? "text-primary "
-                    : "text-gray-700 hover:text-primary"
-                } transition-colors font-semibold duration-200`}
-              >
-                <a href={path}>{name}</a>
-              </li>
-            ))}
-            <li>
-              <a
-                href={registrationLink}
-                target="_blank"
-                className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out"
-              >
-                Register
-              </a>
-            </li>
-          </ul>
-          <div
-            className={`md:hidden p-2 rounded bg-primary text-white transition-all duration-200 ease-in-out ${
-              menuOpen ? "border-2 border-red-400" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
+        <div className="flex flex-row items-center scale-90 lg:scale-95">
+          <Image src={Logo1} alt="logo" className="h-24 w-24" />
+          <Image src={Logo2} alt="logo" className="h-14 w-44 " />
+        </div>
+        <ul className="hidden md:flex items-center gap-4 lg:gap-8">
+          {routes.map(({ name, path }) => (
+            <li
+              key={name}
+              className={`${
+                pathname === path
+                  ? "text-primary "
+                  : "text-gray-700 hover:text-primary"
+              } transition-colors font-semibold duration-200`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </div>
+              <a href={path}>{name}</a>
+            </li>
+          ))}
+          <li>
+            <a
+              href={registrationLink}
+              target="_blank"
+              className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out"
+            >
+              Register
+            </a>
+          </li>
+        </ul>
+        <div
+          className={`md:hidden p-2 rounded bg-primary text-white transition-all duration-200 ease-in-out ${
+            menuOpen ? "border-2 border-red-400" : ""
+          }`}
+          onClick={toggleMenu}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
         </div>
       </div>
       <div

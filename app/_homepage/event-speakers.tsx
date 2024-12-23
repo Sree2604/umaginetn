@@ -27,7 +27,7 @@ export default function EventSpeakers() {
           <AnimateUp key={index}>
             <div className="flex flex-col items-center hover:opacity-60 transition-all duration-200 ease-in-out">
               <div
-                className="relative group flex justify-center items-center text-primary cursor-pointer"
+                className="relative group flex justify-center items-center text-primary cursor-pointer mb-2"
                 onClick={() => NavigateSpeaker(speaker.name)}
               >
                 <Image
@@ -52,7 +52,7 @@ export default function EventSpeakers() {
                   />
                 </svg>
               </div>
-              <h4 className="font-bold text-2xl text-primary">
+              <h4 className="font-bold text-xl lg:text-2xl text-primary">
                 {speaker.name}
               </h4>
               <p className="text-sm">{speaker.role}</p>
