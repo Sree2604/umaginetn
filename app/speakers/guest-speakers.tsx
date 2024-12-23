@@ -1,34 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import speaker from "@/public/speaker.jpg";
 import { useRouter } from "next/navigation";
 import AnimateUp from "@/components/animate-up";
+import { guestSpeakers } from "@/speakers";
 
 export default function GuestSpeakers() {
   const nav = useRouter();
-  const speakers = [
-    {
-      name: "James Killer",
-      photo: speaker,
-      role: "Founder-Edita",
-    },
-    {
-      name: "Jane Doe",
-      photo: speaker,
-      role: "Co-Founder-TechWave",
-    },
-    {
-      name: "Alice Smith",
-      photo: speaker,
-      role: "CEO-Innovate",
-    },
-    {
-      name: "Robert Brown",
-      photo: speaker,
-      role: "CTO-CreativeLabs",
-    },
-  ];
 
   const NavigateSpeaker = (name: string) => {
     nav.push(`/speakers/${name}`);
@@ -40,7 +18,7 @@ export default function GuestSpeakers() {
         Guest <span className="text-primary">Speakers</span>
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center">
-        {speakers.map((speaker, index) => (
+        {guestSpeakers.map((speaker, index) => (
           <AnimateUp key={index}>
             <div className="flex flex-col items-center transition-all duration-200 ease-in-out">
               <div

@@ -2,34 +2,12 @@
 
 import Image from "next/image";
 
-import speaker from "@/public/speaker.jpg";
 import { useRouter } from "next/navigation";
 import AnimateUp from "@/components/animate-up";
+import { eventSpeakers } from "@/speakers";
 
 export default function EventSpeakers() {
   const nav = useRouter();
-  const speakers = [
-    {
-      name: "James Killer",
-      photo: speaker,
-      role: "Founder-Edita",
-    },
-    {
-      name: "Jane Doe",
-      photo: speaker,
-      role: "Co-Founder-TechWave",
-    },
-    {
-      name: "Alice Smith",
-      photo: speaker,
-      role: "CEO-Innovate",
-    },
-    {
-      name: "Robert Brown",
-      photo: speaker,
-      role: "CTO-CreativeLabs",
-    },
-  ];
 
   const Navigate = () => {
     nav.push("/speakers");
@@ -45,7 +23,7 @@ export default function EventSpeakers() {
         Event <span className="text-primary">Speakers</span>
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center">
-        {speakers.map((speaker, index) => (
+        {eventSpeakers.slice(0, 4).map((speaker, index) => (
           <AnimateUp key={index}>
             <div className="flex flex-col items-center hover:opacity-60 transition-all duration-200 ease-in-out">
               <div

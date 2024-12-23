@@ -3,8 +3,8 @@ import { useCallback, useRef, useEffect, MouseEventHandler } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Modal({ children }: { children: React.ReactNode }) {
-  const overlay = useRef(null);
-  const wrapper = useRef(null);
+  const overlay = useRef<HTMLDivElement | null>(null);
+  const wrapper = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
 
   const onDismiss = useCallback(() => {
@@ -28,6 +28,15 @@ export default function Modal({ children }: { children: React.ReactNode }) {
   );
 
   useEffect(() => {
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = originalStyle;
+    };
+  }, []);
+
+  useEffect(() => {
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [onKeyDown]);
@@ -35,12 +44,12 @@ export default function Modal({ children }: { children: React.ReactNode }) {
   return (
     <div
       ref={overlay}
-      className="fixed z-50 left-0 right-0 top-0 bottom-0 mx-auto bg-black/60 p-2"
+      className="absolute z-50 inset-0 bg-black/60 p-2 flex items-center justify-center"
       onClick={onClick}
     >
       <div
         ref={wrapper}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 lg:w-3/5 bg-white rounded"
+        className="bg-white rounded w-11/12 lg:w-3/5 max-h-[calc(100vh-4rem)] overflow-y-auto"
       >
         {children}
       </div>

@@ -47,8 +47,8 @@ export default function Header() {
     <div className="relative w-full flex flex-col-reverse md:flex-row items-center">
       <div className="flex flex-col justify-center items-center w-full">
         <div className="absolute flex flex-col justify-center items-center w-full md:gap-2 lg:gap-4 xl:gap-8 translate-y-5">
-          <h1 className="flex flex-col gap-3 text-3xl md:text-4xl lg:text-6xl font-bold text-primary">
-            <span>Premier Tech event</span>
+          <h1 className="flex flex-col gap-3 text-3xl md:text-4xl lg:text-6xl font-bold">
+            <span className="text-primary">Premier Tech event</span>
             <span>by the Government</span>
             <span>of TamilNadu</span>
           </h1>
@@ -59,26 +59,26 @@ export default function Header() {
           >
             Register Now
           </a>
-          <div className="flex gap-6 text-primary scale-65 lg:scale-100">
-            <p className="flex flex-col items-center justify-center rounded-full size-20">
+          <div className="flex gap-8 scale-65 lg:scale-100">
+            <p className="flex flex-col items-center justify-center rounded-full">
               <span className="text-2xl font-bold">{timeLeft.days}</span>
               <span className="text-xs font-semibold">DAYS</span>
             </p>
-            <p className="flex flex-col items-center justify-center rounded-full size-20">
+            <p className="flex flex-col items-center justify-center rounded-full">
               <span className="text-2xl font-bold">{timeLeft.hours}</span>
               <span className="text-xs font-semibold">HOURS</span>
             </p>
-            <p className="flex flex-col items-center justify-center rounded-full size-20">
+            <p className="flex flex-col items-center justify-center rounded-full">
               <span className="text-2xl font-bold">{timeLeft.minutes}</span>
               <span className="text-xs font-semibold">MINUTES</span>
             </p>
-            <p className="flex flex-col items-center justify-center rounded-full size-20">
+            <p className="flex flex-col items-center justify-center rounded-full">
               <span className="text-2xl font-bold">{timeLeft.seconds}</span>
               <span className="text-xs font-semibold">SECONDS</span>
             </p>
           </div>
           <div>
-            <p className="flex justify-center items-center gap-2 text-lg scale-85 md:scale-100 ">
+            <p className="flex justify-center items-center gap-2 text-lg scale-85 md:scale-100 text-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -97,7 +97,7 @@ export default function Header() {
             </p>
             <Link
               href="#directions"
-              className="flex justify-center items-center gap-2 text-lg scale-85 md:scale-100 hover:text-primary cursor-pointer"
+              className="flex justify-center gap-1 items-center text-lg scale-85 md:scale-100 hover:text-primary cursor-pointer"
             >
               <span>Chennai Trade Centre</span>
               <svg
@@ -106,7 +106,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className="size-6 translate-y-0.5"
+                className="size-4 translate-y-[1px]"
               >
                 <path
                   strokeLinecap="round"
@@ -120,12 +120,14 @@ export default function Header() {
         <Image
           src={header2}
           alt="header"
+          priority
           className="w-full object-cover h-full -z-10"
         />
       </div>
       <Image
         src={header1}
         alt="header"
+        priority
         className="w-full object-cover h-full"
       />
     </div>

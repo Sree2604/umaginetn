@@ -1,9 +1,7 @@
 import Image from "next/image";
 
 import AnimateUp from "@/components/animate-up";
-import Gallery1 from "@/public/gallery1.jpg";
-import Gallery2 from "@/public/gallery2.jpg";
-import Gallery3 from "@/public/gallery3.jpg";
+import { gallery } from "@/gallery";
 
 export default function SocialGallery() {
   return (
@@ -14,21 +12,14 @@ export default function SocialGallery() {
 
       <AnimateUp>
         <div className="flex flex-col md:flex-row gap-3 w-full justify-between">
-          <Image
-            src={Gallery1}
-            alt="Innovate Today, Inspire Tomorrow"
-            className="w-full md:w-1/4"
-          />
-          <Image
-            src={Gallery2}
-            alt="Innovate Today, Inspire Tomorrow"
-            className="w-full md:w-1/4"
-          />
-          <Image
-            src={Gallery3}
-            alt="Driving Innovation, Fueling Sustainability"
-            className="w-full md:w-1/4"
-          />
+          {gallery.map((image, index) => (
+            <Image
+              key={index}
+              src={image.photo}
+              alt={image.alt}
+              className="w-full md:w-1/4"
+            />
+          ))}
         </div>
       </AnimateUp>
     </div>
