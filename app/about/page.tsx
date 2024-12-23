@@ -72,13 +72,14 @@ export default function Page() {
           UmagaineTN 2025 <span className="text-primary">Experience</span>
         </h3>
         {/* Mobile Image */}
-        <Image
-          src={phoneExperience}
-          alt="Mobile Experience Img"
-          style={{ objectFit: "contain" }}
-          className="w-full"
-        />
-
+        <div className="relative w-full h-full  sm:hidden my-8">
+          <Image
+            src={phoneExperience}
+            alt="Mobile Experience Img"
+            style={{ objectFit: "contain" }}
+            className="w-full"
+          />
+        </div>
         {/* Desktop Image */}
         <div className="relative w-full h-full hidden sm:block my-8">
           <Image
