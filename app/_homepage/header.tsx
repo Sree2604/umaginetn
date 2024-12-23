@@ -46,7 +46,7 @@ export default function Header() {
   return (
     <div className="relative w-full flex flex-col-reverse md:flex-row items-center">
       <div className="flex flex-col justify-center items-center w-full">
-        <div className="absolute flex flex-col justify-center items-center w-full md:gap-2 lg:gap-4 xl:gap-8 translate-y-5">
+        <div className="absolute flex flex-col justify-center pt-[80px] sm:pt-[60px] items-center w-full md:gap-2 lg:gap-4 xl:gap-8 translate-y-5">
           <h1 className="flex flex-col gap-3 text-3xl md:text-4xl lg:text-6xl font-bold">
             <span className="text-primary">Premier Tech event</span>
             <span>by the Government</span>
