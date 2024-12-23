@@ -47,8 +47,8 @@ export default function Header() {
     <div className="relative w-full flex flex-col-reverse md:flex-row items-center">
       <div className="flex flex-col justify-center items-center w-full">
         <div className="absolute flex flex-col justify-center items-center w-full md:gap-2 lg:gap-4 xl:gap-8 md:translate-y-10">
-          <h1 className="flex flex-col gap-3 text-3xl md:text-4xl lg:text-6xl font-bold">
-            <span className="text-primary">Premier Tech event</span>
+          <h1 className="flex flex-col gap-3 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center">
+            <span className="text-primary">Premier Tech Event</span>
             <span>by the Government</span>
             <span>of TamilNadu</span>
           </h1>
@@ -59,21 +59,21 @@ export default function Header() {
           >
             Register Now
           </a>
-          <div className="flex gap-8 scale-65 lg:scale-100">
+          <div className="flex gap-8 scale-75 lg:scale-100">
             <p className="flex flex-col items-center justify-center rounded-full">
-              <span className="text-2xl font-bold">{timeLeft.days}</span>
+              <span className="text-3xl font-bold">{timeLeft.days}</span>
               <span className="text-xs font-semibold">DAYS</span>
             </p>
             <p className="flex flex-col items-center justify-center rounded-full">
-              <span className="text-2xl font-bold">{timeLeft.hours}</span>
+              <span className="text-3xl font-bold">{timeLeft.hours}</span>
               <span className="text-xs font-semibold">HOURS</span>
             </p>
             <p className="flex flex-col items-center justify-center rounded-full">
-              <span className="text-2xl font-bold">{timeLeft.minutes}</span>
+              <span className="text-3xl font-bold">{timeLeft.minutes}</span>
               <span className="text-xs font-semibold">MINUTES</span>
             </p>
             <p className="flex flex-col items-center justify-center rounded-full">
-              <span className="text-2xl font-bold">{timeLeft.seconds}</span>
+              <span className="text-3xl font-bold">{timeLeft.seconds}</span>
               <span className="text-xs font-semibold">SECONDS</span>
             </p>
           </div>
