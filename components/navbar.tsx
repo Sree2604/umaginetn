@@ -3,7 +3,9 @@
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import Logo from "@/public/logo.png";
+// import Logo from "@/public/logo.png";
+import Logo1 from "@/public/logo1.png";
+import Logo3 from "@/public/logo3.png";
 import Image from "next/image";
 import { registrationLink } from "@/links";
 
@@ -66,7 +68,8 @@ export default function Navbar() {
         } transform transition-transform duration-500 ease-in-out z-40`}
       >
         <div className="flex justify-around items-center py-1">
-          <Image src={Logo} alt="logo" className="h-18 w-56" />
+          <Image src={Logo1} alt="logo" className="h-24 w-24" />
+          <Image src={Logo3} alt="logo" className="h-14 w-44" />
           <ul className="hidden md:flex items-center gap-4 lg:gap-8">
             {routes.map(({ name, path }) => (
               <li
