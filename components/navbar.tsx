@@ -63,15 +63,15 @@ export default function Navbar() {
         ref={menuRef}
         className={`${
           scrolled
-            ? "fixed top-0 left-0 w-full bg-white text-black shadow-md"
-            : "relative md:absolute w-full"
-        } transform transition-transform duration-500 ease-in-out z-40 flex justify-around items-center py-1 scale-95 lg:scale-100`}
+            ? "fixed top-0 left-0 bg-white text-black shadow-md"
+            : "relative md:absolute "
+        } transform transition-transform w-full duration-500 ease-in-out z-40 px-3 lg:p-2 flex justify-between md:justify-around items-center`}
       >
-        <div className="flex flex-row items-center scale-90 lg:scale-95">
-          <Image src={Logo1} alt="logo" className="h-24 w-24" />
+        <div className="flex flex-row items-center scale-85 lg:scale-95">
+          <Image src={Logo1} alt="logo" className="size-20" />
           <Image src={Logo2} alt="logo" className="h-14 w-44 " />
         </div>
-        <ul className="hidden md:flex items-center gap-4 lg:gap-8">
+        <ul className="hidden md:flex items-center gap-3 lg:gap-8">
           {routes.map(({ name, path }) => (
             <li
               key={name}
@@ -79,7 +79,7 @@ export default function Navbar() {
                 pathname === path
                   ? "text-primary "
                   : "text-gray-700 hover:text-primary"
-              } transition-colors font-semibold duration-200`}
+              } transition-colors font-semibold lg:text-lg duration-200`}
             >
               <a href={path}>{name}</a>
             </li>
