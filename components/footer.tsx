@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import {
   facebookLink,
   instagramLink,
@@ -5,7 +8,6 @@ import {
   twitterLink,
   youtubeLink,
 } from "@/links";
-import Image from "next/image";
 
 import Venue from "@/public/venue.jpg";
 import bg1 from "@/public/footer.jpg";
@@ -119,13 +121,13 @@ export default function Footer() {
           />
         </svg>
 
-        <a
+        <Link
           href={registrationLink}
           target="_blank"
           className="p-2 px-4 text-lg bg-primary text-white hover:bg-secondary rounded font-semibold transition-colors duration-200 ease-in-out mt-8"
         >
           Register Now!
-        </a>
+        </Link>
       </div>
       <div
         id="directions"
@@ -139,13 +141,13 @@ export default function Footer() {
             </span>
             <span>Nandambakkam, Nandambakkam, Tamil Nadu - 600089, India</span>
           </p>
-          <a
+          <Link
             href="https://maps.app.goo.gl/7xZANUjJjTBxzJ3L9"
             target="_blank"
             className="p-2 px-4 bg-primary text-white hover:bg-secondary border-2 border-primary rounded font-semibold transition-colors duration-200 ease-in-out"
           >
             Get Directions
-          </a>
+          </Link>
         </div>
         <iframe
           title="chennai trade center"
@@ -161,14 +163,14 @@ export default function Footer() {
               key={index}
               className="border-2 border-white p-1 rounded-full hover:bg-primary"
             >
-              <a
+              <Link
                 href={path}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
               >
                 {name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

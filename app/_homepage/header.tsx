@@ -54,13 +54,13 @@ export default function Header() {
           <p className="text-lg md:text-xl font-semibold">
             A Government of Tamil Nadu Initiative
           </p>
-          <a
+          <Link
             href={registrationLink}
             target="_blank"
             className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out scale-75 md:scale-85 lg:scale-100"
           >
             Register Now
-          </a>
+          </Link>
           <div className="flex gap-8 scale-75 lg:scale-100">
             <p className="flex flex-col items-center justify-center rounded-full">
               <span className="text-3xl font-bold">{timeLeft.days}</span>

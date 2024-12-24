@@ -1,9 +1,10 @@
 import Image from "next/image";
 
-import socialmedia from "@/public/socialmedia.jpg";
+import Link from "next/link";
 
-import { facebookLink, instagramLink, twitterLink, youtubeLink } from "@/links";
 import AnimateUp from "./animate-up";
+import { facebookLink, instagramLink, twitterLink, youtubeLink } from "@/links";
+import socialmedia from "@/public/socialmedia.jpg";
 
 export default function SocialMedia() {
   const links = [
@@ -104,14 +105,14 @@ export default function SocialMedia() {
               key={index}
               className="border-2 border-white p-1 rounded-full hover:bg-primary hover:text-white"
             >
-              <a
+              <Link
                 href={path}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
               >
                 {name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
