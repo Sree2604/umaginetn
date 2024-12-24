@@ -4,8 +4,10 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-import Logo1 from "@/public/logo1.png";
-import Logo2 from "@/public/logo2.png";
+import Logo1 from "@/public/logos/UmagineTN logo.png";
+import Logo2 from "@/public/logos/ATTN logo.png";
+import Logo3 from "@/public/logos/GOV logo.png";
+import Logo4 from "@/public/logos/ELCOT logo.png";
 
 import { registrationLink } from "@/links";
 
@@ -65,11 +67,13 @@ export default function Navbar() {
           scrolled
             ? "fixed top-0 left-0 bg-white text-black shadow-md"
             : "relative md:absolute "
-        } transform transition-transform w-full duration-500 ease-in-out z-40 px-3 lg:p-2 flex justify-between md:justify-around items-center`}
+        } transform transition-transform w-full duration-500 ease-in-out z-40 px-2 lg:p-1 flex justify-between md:justify-around items-center`}
       >
-        <div className="flex flex-row items-center scale-85 lg:scale-95">
-          <Image src={Logo1} alt="logo" className="size-20" />
-          <Image src={Logo2} alt="logo" className="h-14 w-44 " />
+        <div className="flex flex-row gap-3 items-center scale-75 lg:scale-95">
+          <Image src={Logo1} alt="logo" width={80} className="h-auto" />
+          <Image src={Logo2} alt="logo" width={55} className="h-auto" />
+          <Image src={Logo3} alt="logo" width={55} className="h-auto" />
+          <Image src={Logo4} alt="logo" width={55} className="h-auto" />
         </div>
         <ul className="hidden md:flex items-center gap-3 lg:gap-8">
           {routes.map(({ name, path }) => (
