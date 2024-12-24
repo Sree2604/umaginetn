@@ -34,6 +34,7 @@ export default function RootLayout({
       <head>
         {/* Google Tag Manager Script */}
         <Script
+          id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
