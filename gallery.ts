@@ -6,4 +6,7 @@ export const gallery = [
   { photo: Gallery1, alt: "Innovate Today, Inspire Tomorrow" },
   { photo: Gallery2, alt: "Innovate Today, Inspire Tomorrow" },
   { photo: Gallery3, alt: "Driving Innovation, Fueling Sustainability" },
+  { photo: Gallery1, alt: "Innovate Today, Inspire Tomorrow" },
+  { photo: Gallery2, alt: "Innovate Today, Inspire Tomorrow" },
+  { photo: Gallery3, alt: "Driving Innovation, Fueling Sustainability" },
 ];

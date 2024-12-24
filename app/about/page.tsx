@@ -71,7 +71,6 @@ export default function Page() {
         <h3 className="text-2xl font-bold">
           UmagaineTN 2025 <span className="text-primary">Experience</span>
         </h3>
-        {/* Mobile Image */}
         <div className="relative w-full h-full  sm:hidden my-8">
           <Image
             src={phoneExperience}
@@ -80,8 +79,7 @@ export default function Page() {
             className="w-full"
           />
         </div>
-        {/* Desktop Image */}
-        <div className="relative w-full h-full hidden sm:block my-8">
+        <div className="relative w-full h-full hidden sm:block my-8 rounded">
           <Image
             src={experience}
             alt="Desktop Experience Img"
