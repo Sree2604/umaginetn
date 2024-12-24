@@ -6,7 +6,12 @@ export const metadata: Metadata = {
   description: "Embark on a journey of Transformation",
 };
 
-export const pushToDataLayer = (event: object) => {
+interface DataLayerEvent {
+  event: string;
+  [key: string]: any;
+}
+
+export const pushToDataLayer = (event: DataLayerEvent) => {
   if (typeof window !== "undefined" && window.dataLayer) {
     window.dataLayer.push(event);
   }
