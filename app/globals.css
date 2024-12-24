@@ -7,6 +7,7 @@
   src: url("/fonts/Fontspring-DEMO-neometricalt-black.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -14,4 +15,5 @@
   src: url("/fonts/MyraidPro-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }

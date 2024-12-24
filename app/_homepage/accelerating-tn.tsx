@@ -1,5 +1,5 @@
 import Image from "next/image";
-import tn from "@/public/TN.png";
+import tn from "@/public/tn.jpg";
 import AnimateUp from "@/components/animate-up";
 
 export default function AcceleratingTN() {
@@ -11,7 +11,7 @@ export default function AcceleratingTN() {
           alt="TN-Img"
           width={430}
           style={{ height: "auto" }}
-          className="rounded-lg "
+          className="rounded-3xl "
         />
       </AnimateUp>
       <div className="w-full sm:w-1/2">
