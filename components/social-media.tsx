@@ -102,7 +102,7 @@ export default function SocialMedia() {
           {links.map(({ name, path, label }, index) => (
             <li
               key={index}
-              className="border-2 border-white p-1 rounded-full hover:bg-primary"
+              className="border-2 border-white p-1 rounded-full hover:bg-primary hover:text-white"
             >
               <a
                 href={path}
