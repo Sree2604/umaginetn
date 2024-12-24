@@ -1,9 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import experience from "@/public/experience.jpg";
 import platform from "@/public/platformImg.jpg";
 import convergence from "@/public/convergence.jpg";
-import phoneExperience from "@/public/phoneExpe.png";
 
 import Navbar from "@/components/navbar";
 import ScrollUp from "@/components/scroll-up";
@@ -11,6 +9,7 @@ import Footer from "@/components/footer";
 import TitleBar from "@/components/title-bar";
 import SocialMedia from "@/components/social-media";
 import AnimateUp from "@/components/animate-up";
+import Experience from "../_homepage/experience";
 
 export default function Page() {
   return (
@@ -67,26 +66,7 @@ export default function Page() {
         </AnimateUp>
       </div>
       <SocialMedia />
-      <div className="relative w-full sm:w-11/12 bg-cover bg-center flex flex-col items-center justify-center mx-auto my-6">
-        <h3 className="text-2xl font-bold">
-          UmagaineTN 2025 <span className="text-primary">Experience</span>
-        </h3>
-        <div className="relative w-full h-full  sm:hidden my-8">
-          <Image
-            src={phoneExperience}
-            alt="Mobile Experience Img"
-            style={{ objectFit: "contain" }}
-            className="w-full"
-          />
-        </div>
-        <div className="relative w-full h-full hidden sm:block my-8 rounded">
-          <Image
-            src={experience}
-            alt="Desktop Experience Img"
-            className="w-full"
-          />
-        </div>
-      </div>
+      <Experience />
       <Footer />
       <ScrollUp />
     </>

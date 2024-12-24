@@ -90,7 +90,7 @@ export default function SocialMedia() {
   ];
 
   return (
-    <div className="w-full relative min-h-80 h-full flex flex-col items-center justify-center gap-5">
+    <div className="w-full relative min-h-80 h-full flex flex-col items-center justify-center gap-5 my-5">
       <Image
         src={socialmedia}
         alt="Social media background"

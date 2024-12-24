@@ -48,10 +48,12 @@ export default function Header() {
       <div className="flex flex-col justify-center items-center w-full">
         <div className="absolute flex flex-col justify-center items-center w-full md:gap-2 lg:gap-4 xl:gap-8 md:translate-y-10">
           <h1 className="flex flex-col gap-3 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center">
-            <span className="text-primary">Premier Tech Event</span>
-            <span>by the Government</span>
-            <span>of TamilNadu</span>
+            <span className="text-primary">Embark on a Journey</span>
+            <span className="text-primary">of Transformation</span>
           </h1>
+          <p className="text-lg md:text-xl font-semibold">
+            A Government of Tamil Nadu Initiative
+          </p>
           <a
             href={registrationLink}
             target="_blank"

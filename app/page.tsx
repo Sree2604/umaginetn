@@ -7,14 +7,16 @@ import SocialMedia from "@/components/social-media";
 // import EventSpeakers from "./_homepage/event-speakers";
 import AcceleratingTN from "./_homepage/accelerating-tn";
 import ScrollUp from "@/components/scroll-up";
+import Experience from "./_homepage/experience";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Header />
-      <KeyTracks />
       <AcceleratingTN />
+      <Experience />
+      <KeyTracks />
       <SocialMedia />
       {/* <EventSpeakers /> */}
       {/* <SocialGallery /> */}

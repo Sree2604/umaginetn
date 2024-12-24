@@ -1,17 +1,17 @@
 import Image from "next/image";
-import bg from "@/public/tp_Bg.jpg";
 import tn from "@/public/TN.png";
 import AnimateUp from "@/components/animate-up";
 
 export default function AcceleratingTN() {
   return (
-    <div
-      className="relative h-auto py-8 p-2 bg-cover bg-center flex flex-col md:flex-row items-center justify-center mb-10 sm:px-20 overflow-hidden"
-      style={{ backgroundImage: `url(${bg.src})` }}
-    >
-      <div className="text-white w-full md:w-1/2">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-          Accelerating Tamil Nadu&lsquo;s Tech Progression!
+    <div className="relative border-t-8 border-primary h-auto py-8 sm:py-12 p-2 bg-cover bg-center flex flex-col gap-5 md:flex-row items-center justify-center sm:px-20 overflow-hidden">
+      <AnimateUp direction={"right"}>
+        <Image src={tn} alt="TN-Img" width={430} className="rounded-lg " />
+      </AnimateUp>
+      <div className="w-full md:w-1/2">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 flex flex-col">
+          Accelerating Tamil Nadu&lsquo;s
+          <span className="text-primary">Tech Progression!</span>
         </h1>
         <p className="text-lg sm:text-xl">
           AT&lsquo;TN is not just a theme; it&lsquo;s a reinforcement for Tech
@@ -22,9 +22,6 @@ export default function AcceleratingTN() {
           for e-governance, and leveraging Geomatics for sustainability.
         </p>
       </div>
-      <AnimateUp direction={"left"}>
-        <Image src={tn} alt="TN-Img" width={450} className="rounded-lg " />
-      </AnimateUp>
     </div>
   );
 }
