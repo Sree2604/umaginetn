@@ -44,6 +44,12 @@ export default function Navbar() {
     }
   }, []);
 
+  const pushToDataLayer = (event: object) => {
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push(event);
+    }
+  };
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);
@@ -98,6 +104,14 @@ export default function Navbar() {
               href={registrationLink}
               target="_blank"
               className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out"
+              onClick={() =>
+                pushToDataLayer({
+                  event: "registration_click",
+                  category: "CTA",
+                  action: "Click",
+                  label: "Register Button",
+                })
+              }
             >
               Register
             </Link>
