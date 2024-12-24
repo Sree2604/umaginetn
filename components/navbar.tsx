@@ -10,6 +10,7 @@ import Logo3 from "@/public/logos/GOV logo.png";
 import Logo4 from "@/public/logos/ELCOT logo.png";
 
 import { registrationLink } from "@/links";
+import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -69,12 +70,16 @@ export default function Navbar() {
             : "relative md:absolute "
         } transform transition-transform w-full duration-500 ease-in-out z-40 px-2 lg:p-1 flex justify-between md:justify-around items-center`}
       >
-        <div className="flex flex-row gap-3 items-center scale-75 lg:scale-95">
-          <Image src={Logo1} alt="logo" width={80} className="h-auto" />
-          <Image src={Logo2} alt="logo" width={55} className="h-auto" />
-          <Image src={Logo3} alt="logo" width={55} className="h-auto" />
-          <Image src={Logo4} alt="logo" width={55} className="h-auto" />
-        </div>
+        <Link
+          href={"/"}
+          className="flex flex-row gap-3 items-center scale-75 lg:scale-95"
+        >
+          <Image src={Logo1} alt="logo" width={80} style={{ height: "auto" }} />
+          <Image src={Logo2} alt="logo" width={55} style={{ height: "auto" }} />
+          <Image src={Logo3} alt="logo" width={55} style={{ height: "auto" }} />
+          <Image src={Logo4} alt="logo" width={55} style={{ height: "auto" }} />
+        </Link>
+
         <ul className="hidden md:flex items-center gap-3 lg:gap-8">
           {routes.map(({ name, path }) => (
             <li
@@ -85,7 +90,7 @@ export default function Navbar() {
                   : "text-gray-700 hover:text-primary"
               } transition-colors font-semibold lg:text-lg duration-200`}
             >
-              <a href={path}>{name}</a>
+              <Link href={path}>{name}</Link>
             </li>
           ))}
           <li>
@@ -135,7 +140,7 @@ export default function Navbar() {
                   : "text-gray-700"
               } transition-colors duration-200`}
             >
-              <a href={path}>{name}</a>
+              <Link href={path}>{name}</Link>
             </li>
           ))}
         </ul>

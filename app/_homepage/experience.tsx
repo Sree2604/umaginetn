@@ -5,7 +5,7 @@ import phoneExperience from "@/public/phoneExpe.png";
 
 export default function Experience() {
   return (
-    <div className="relative w-full flex flex-col items-center justify-center">
+    <div className="relative w-full flex flex-col items-center justify-center p-3 sm:p-0">
       <h3 className="text-2xl font-bold sm:hidden">
         UmagaineTN 2025 <span className="text-primary">Experience</span>
       </h3>
