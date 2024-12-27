@@ -102,7 +102,6 @@ export default function Navbar() {
           <li>
             <Link
               href={registrationLink}
-              target="_blank"
               className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out"
               onClick={() =>
                 pushToDataLayer({

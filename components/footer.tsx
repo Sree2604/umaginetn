@@ -123,7 +123,6 @@ export default function Footer() {
 
         <Link
           href={registrationLink}
-          target="_blank"
           className="p-2 px-4 text-lg bg-primary text-white hover:bg-secondary rounded font-semibold transition-colors duration-200 ease-in-out mt-8"
         >
           Register Now!

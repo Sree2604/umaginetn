@@ -56,7 +56,6 @@ export default function Header() {
           </p>
           <Link
             href={registrationLink}
-            target="_blank"
             className="p-2 px-4 text-lg bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out scale-75 md:scale-85 lg:scale-100"
           >
             Register Now
