@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "UmagineTN 2025 Experience",
+  title: "UmagineTN 2025",
   description: "Embark on a journey of Transformation",
 };
 
