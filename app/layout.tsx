@@ -34,7 +34,10 @@ export default function RootLayout({
               `,
           }}
         />
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        <Script
+          src="https://cdn.lightwidget.com/widgets/lightwidget.js"
+          strategy="lazyOnload"
+        />
         <link
           rel="preload"
           href="/fonts/Fontspring-DEMO-neometricalt-black.otf"
