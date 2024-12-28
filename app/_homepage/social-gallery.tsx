@@ -1,10 +1,15 @@
 "use client";
-import Image from "next/image";
+
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { gallery } from "@/gallery";
-
 export default function SocialGallery() {
+  const [showIframe, setShowIframe] = useState(false);
+
+  useEffect(() => {
+    setShowIframe(true);
+  }, []);
+
   const nav = useRouter();
   const Navigate = () => {
     nav.push("/gallery");
@@ -16,23 +21,15 @@ export default function SocialGallery() {
         Social <span className="text-primary">Gallery</span>
       </h2>
 
-      <div className="relative w-full overflow-hidden">
-        <div className="flex gap-3 animate-scroll">
-          {gallery.concat(gallery).map((image, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-3/4 md:w-1/4 overflow-hidden"
-            >
-              <Image
-                src={image.photo}
-                alt={image.alt}
-                className="rounded-lg w-full"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
+      {showIframe && (
+        <>
+          <iframe
+            src="//lightwidget.com/widgets/dee1623729df5ee3a43f6fc4ea2f8e1a.html"
+            scrolling="no"
+            className="lightwidget-widget w-full border-0 overflow-hidden"
+          ></iframe>
+        </>
+      )}
       <button
         onClick={Navigate}
         className="mx-auto px-4 py-2 bg-primary hover:bg-secondary text-white font-bold rounded-md hover:bg-primary-dark transition-all duration-200 ease-in-out"
