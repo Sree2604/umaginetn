@@ -13,13 +13,6 @@ export default function SocialGallery() {
         scrolling="no"
         className="lightwidget-widget w-full border-0 overflow-hidden"
       ></iframe>
-      <Link
-        href={instagramLink}
-        target="_blank"
-        className="mx-auto px-4 py-2 bg-primary hover:bg-secondary text-white font-bold rounded-md hover:bg-primary-dark transition-all duration-200 ease-in-out"
-      >
-        View More
-      </Link>
     </div>
   );
 }
