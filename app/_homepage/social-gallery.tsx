@@ -1,6 +1,4 @@
 "use client";
-import { instagramLink } from "@/links";
-import Link from "next/link";
 
 export default function SocialGallery() {
   return (
