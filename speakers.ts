@@ -1,4 +1,4 @@
-import speakerBot from "@/public/speakers/speaker.jpg";
+import speaker from "@/public/speakers/speaker.jpg";
 
 import speaker1 from "@/public/speakers/Vishal Dhupar.jpg";
 import speaker2 from "@/public/speakers/A S Lakshminarayanan.jpg";
@@ -140,8 +140,8 @@ export const eventSpeakers = [
   {
     id: "4",
     name: "Akhil Kapoor",
-    company: "",
-    role: " ",
+    company: "GBS Global Procurement",
+    role: " Vice President",
     bio: "Akhil Kapoor, currently the Hub Lead at adidas GBS India and Vice President of GBS Global Procurement, has a distinguished two-decade career in procurement and operations. An MBA graduate from Ohio University with a Mechanical Engineering degree from North Maharashtra University, he has held pivotal roles at Novartis, including Head of the Global Services Center. Akhil's vast experience extends to roles at Barclays, Nortel, and Xerox, where he excelled in sourcing and procurement strategies. His specialization in indirect sourcing, purchasing, and category management spans multiple geographies, demonstrating his extensive expertise and strategic acumen in leading complex procurement operations globally.",
     photo: speaker4,
   },
@@ -156,8 +156,8 @@ export const eventSpeakers = [
   {
     id: "6",
     name: "Anand Kapoor",
-    company: "",
-    role: " ",
+    company: "Straive",
+    role: "Group CIO",
     bio: "Anand Kapoor is the Group CIO at Straive, bringing over 25 years of experience in leading global IT operations and driving digital transformation. He leads technology initiatives across Straive's global brands, including enterprise platform implementations, cloud solutions, and robust cybersecurity frameworks. Under his leadership, Straive has strengthened IT infrastructure, adopted innovative cloud solutions, and enabled scalable processes. Anand is also passionate about mentoring early-stage startups, guiding their technology adoption and growth strategies.",
     photo: speaker6,
   },
@@ -711,7 +711,7 @@ export const eventSpeakers = [
     name: "Mr. Raghuveeran Sowmyanarayanan",
     company: "Wipro",
     role: "AI Global Delivery Head",
-    bio: "Raghuveeran Sowmyanarayanan (Raghu) [AI Global Delivery Head, Wipro Limited] brings over 30 years of extensive experience in program management, delivery management, sales and strategy, and account management. Recognized for his thought leadership in AI and analytics, Raghu has been instrumental in driving innovative solutions and strategies in multiple domains. Leveraging the latest advancements in AI and Gen AI, Raghu is trying to create AI strategies and cutting-edge solutions. He is also infusing AI in SDLC, Clients pain areas and business facing domain solutions by taking advantage of AI/Gen AI. He kickstarted TDWI India chapter in 2006 and also have published more than 30 articles in various international magazines/websites. Raghu is also spearheading Ethical AI Practices for ensuring all AI and Gen AI initiatives adhere to the highest Responsible AI standards and establish practices & guidelines.",
+    bio: "Raghuveeran Sowmyanarayanan (Raghu) [AI Global Delivery Head, Wipro Limited] brings over 30 years of extensive experience in program management, delivery management, sales and strategy, and account management. Recognized for his thought leadership in AI and analytics, Raghu has been instrumental in driving innovative solutions and strategies in multiple domains. Leveraging the latest advancements in AI and Gen AI, Raghu is trying to create AI strategies and cutting-edge solutions. He is also infusing AI in SDLC, Clients pain areas and business facing domain solutions by taking advantage of AI/Gen AI. He kickstarted TDWI India chapter in 2006 and also have published more than 30 articles in various international magazines/websites. Raghu is also spearheading Ethical AI Practices for ensuring all AI and Gen AI initiatives adhere to the highest Responsible AI standards and establish practices & guidelines.",
     photo: speaker75,
   },
   {
@@ -781,16 +781,16 @@ export const eventSpeakers = [
   {
     id: "88",
     name: "S. Krishnan",
-    company: "-",
+    company: "Secertary for MeiTY Government of India",
     role: "IAS",
-    bio: "",
+    bio: "Krishnan, an esteemed Indian Administrative Service (IAS) officer, currently serves as the Secretary of the Ministry of Electronics and Information Technology (MeitY). With extensive experience in governance, policy formulation, and technology-driven initiatives, Krishnan plays a pivotal role in shaping India’s digital future. He is instrumental in overseeing the development and implementation of policies that promote technological innovation, enhance digital infrastructure, and foster a robust digital economy in India.",
     photo: speaker88,
   },
   {
     id: "89",
     name: "Mr. Sai Sethuraman",
-    company: "-",
-    role: "-",
+    company: "",
+    role: "",
     bio: "",
     photo: speaker89,
   },
@@ -988,10 +988,34 @@ export const eventSpeakers = [
   },
   {
     id: "115",
-    name: "Vivek Raja",
+    name: "Viveka Kalidasan",
     company: "River Venture Studio",
     role: "Founder and CEO",
     bio: "Dr. Viveka Kalidasan is a visionary technopreneur and innovator, recognized as one of MIT’s 35 Innovators Under 35, Singapore's Top 100 Women in Technology, and an NUS Outstanding Young Alumni. She is the pioneering Founder and CEO of River Venture Studio, the world’s first and only inclusive Industry 5.0 accelerator and startup studio. Backed by Enterprise Singapore, River Venture Studio supports startups from across the globe and has launched the first social media platform uniting the global Industry 5.0 community. Under Dr.Viveka's leadership, River Venture Studio champions inclusivity, sustainability, human-centricity, and resilience, empowering robotics, automation, and digital transformation. She ensures that the startup C-suites foster diversity, creating a collaborative environment that values different perspectives. The unique selling proposition (USP) of River Venture Studio lies in facilitating pilot opportunities for startups with potential clients, helping them scale globally. As one of the pioneers of the venture studio model in APAC, Dr. Viveka continues to make a significant impact in the ecosystem. In addition to her work at River, Dr.Viveka is the Founder and CEO of The Edify Project, a one- stop venture - building partner serving startups, academia, corporates, and individuals.Headquartered in Singapore, Edify specializes in launching multinational brands and startups in APAC while managing end - to - end operations, lead generation, and client acquisition. She spearheaded the creation of Let - Lab, the innovation lab of Ultra Clean Holdings Inc. (UCT), in Singapore.Backed by Enterprise Singapore, Let - Lab established Singapore’s Industry 4.0 ecosystem within a year.Dr.Viveka achieved this remarkable feat while navigating her pregnancy and maternity, empowering startups that address unmet needs in the semiconductor Industry 4.0 space. As a dedicated innovator, Dr.Viveka has developed and commercialized patient - centric deeptech medical devices, with a particular focus on FemTech solutions.Her expertise spans R & D, clinical and regulatory pathways, and the commercialization of medtech.Her groundbreaking translational research on wireless sensing(WiSe) sutures was published in the prestigious Nature Biomedical Engineering and featured on the October 2021 cover.It was also spotlighted in Nature News and Views(https://lnkd.in/g3PBGgfw). Passionate about education and mentorship, Dr.Viveka is a mentor to startups, venture creation programs, and aspiring talents, fostering the next generation of innovators. Outside of her professional achievements, she is a fitness enthusiast, a globetrotter, an avid reader, and a light political observer.Dr.Viveka is always open to connecting via LinkedIn, over coffee or tea, or most simply, with a smile.",
     photo: speaker115,
+  },
+  {
+    id: "116",
+    name: "Mr. Aravind Ratnam",
+    company: "Q-Ctrl",
+    role: "Founder",
+    bio: "Aravind is a seasoned strategy and product leader with over 20 years of experience in high-tech industries, including space instruments, quantum computing, lidar, and connected vehicles. He is currently the Chief Strategy Officer at Q-CTRL, a leading quantum software company that enables researchers, developers, and engineers to build stable, reliable quantum computers and quantum sensors. In his role, Aravind oversees strategy, revenue, product, and partnerships, working across Q-CTRL to deliver commercial and technical successes. He is passionate about driving innovation and growth in the quantum ecosystem, leveraging his expertise in system design, engineering, and management. He holds two Master's degrees in Space Science and Engineering and Management from Florida Tech and MIT, respectively.",
+    photo: speaker,
+  },
+  {
+    id: "117",
+    name: "Gayathri Thyagarajan",
+    company: "Kynhood ",
+    role: "CEO",
+    bio: "Gayathri Thyagarajan, CEO, Kynhood Technologies and Founder of KYN – a neighbourhood discovery and connectivity platform, has over two decades of versatile experience in financial services and technology firms in London, New York, Zurich, Singapore and India.  She has held senior positions in various verticals like business strategy and leadership, data, technology, operations and finance. As a senior management professional, she has effectively partnered with C-suite leaders, to define the vision and manage the execution of business strategy leading to targeted profitable outcomes.Her wide exposure to the global market scenario and her deep-rooted understanding of the local community in Chennai are the driving factors of KYN. In less than a year of its launch, KYN app has been downloaded by more than 7 lakh people.   KYN - The true hyper-local new-gen media platform is not just fostering communities but is also working towards establishing self-sustaining micro market economies.Some of the major corporates that she has worked for include Standard Chartered Bank, Caltex, Credit Suisse and Phoenix Group.",
+    photo: speaker,
+  },
+  {
+    id: "118",
+    name: "Siva Padmanabhan",
+    company: "AstraZeneca",
+    role: "MD and Head of Global Innovation and Technology Centre",
+    bio: "Siva Kumar Padmanabhan is the Managing Director and Head of the India Global Innovation and Technology Centre at AstraZeneca India Private Limited (AZIPL). He is also responsible globally for all Enterprise Platforms and Solutions provided by AstraZeneca IT to the business. Since joining AstraZeneca in 2014, Siva has been playing a key role in the transformation of AZ-IT - right from insourcing IT services, building a strong leadership team, developing leading-edge data and digital capabilities and being a key enabler in expanding AZIPL's Indian footprint and innovation capability. Siva is also a member of the NASSCOM GCC Council 2023-25. Previously, Siva led the Global In-house Centre for IT & Digital at Flex, a Fortune 500 company, with global accountability for their customer-facing digital and supply chain solutions. His earlier part of the career was in management and technology consulting with PwC, in India and the US. Siva has an MBA in Finance and Information Systems from the Indian Institute of Management (IIM), Bangalore.",
+    photo: speaker,
   },
 ];

@@ -9,7 +9,7 @@ export default function EventSpeakers() {
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center items-center my-8 w-5/6 mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center items-start my-8 w-5/6 mx-auto">
       {eventSpeakers.map((speaker) => (
         <AnimateUp key={speaker.id}>
           <div className="flex flex-col items-center transition-all duration-200 ease-in-out">
@@ -41,6 +41,7 @@ export default function EventSpeakers() {
               </svg>
             </div>
             <h4 className="font-bold text-xl">{speaker.name}</h4>
+            <p className="text-sm text-primary">{speaker.company}</p>
             <p className="text-sm text-primary">{speaker.role}</p>
           </div>
         </AnimateUp>

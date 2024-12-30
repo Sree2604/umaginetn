@@ -71,18 +71,22 @@ export default function SpeakerPage() {
 
   return (
     <Modal>
-      <div className="flex flex-col md:flex-row gap-5 items-center justify-around p-5">
-        <Image
-          src={speakerDetails.photo}
-          alt={speakerDetails.name}
-          className="rounded-full size-64 object-cover"
-        />
-        <div className="text-center md:text-left max-h-[600px] sm:max-w-[500px] md:max-w-[600px] md:overflow-y-auto">
-          <h2 className="font-bold text-xl mb-2">{speakerDetails.name}</h2>
-          <p className="text-primary mb-4">{speakerDetails.role}</p>
+      <div className="flex flex-col gap-5 items-center justify-around p-5">
+        <div className="flex flex-col overflow-y-auto max-h-[calc(100vh-4rem)] md:p-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-12 md:text-left">
+            <Image
+              src={speakerDetails.photo}
+              alt={speakerDetails.name}
+              className="rounded-full size-60 object-cover"
+            />
+            <div>
+              <h2 className="font-bold text-xl mb-2">{speakerDetails.name}</h2>
+              <p className="text-primary mb-4">{speakerDetails.role}</p>
+            </div>
+          </div>
           <p>{speakerDetails.bio}</p>
         </div>
-        <div className="flex w-full absolute justify-between">
+        <div className="flex w-full absolute justify-between p-1">
           <button
             onClick={goToPrevious}
             className="bg-slate-300 bg-opacity-60 hover:bg-opacity-90 transition-all duration-150 ease-in-out text-white p-1 py-6 rounded-md"
