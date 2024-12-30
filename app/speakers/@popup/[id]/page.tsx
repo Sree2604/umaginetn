@@ -75,10 +75,9 @@ export default function SpeakerPage() {
         <Image
           src={speakerDetails.photo}
           alt={speakerDetails.name}
-          width={288}
-          className="rounded-lg"
+          className="rounded-full size-64 object-cover"
         />
-        <div className="text-center md:text-left max-h-[600px] md:overflow-y-auto">
+        <div className="text-center md:text-left max-h-[600px] sm:max-w-[500px] md:max-w-[600px] md:overflow-y-auto">
           <h2 className="font-bold text-xl mb-2">{speakerDetails.name}</h2>
           <p className="text-primary mb-4">{speakerDetails.role}</p>
           <p>{speakerDetails.bio}</p>
