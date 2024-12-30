@@ -19,15 +19,11 @@ export default function SpeakerPage() {
     return eventSpeakers[speakerIndex] || null;
   }, [speakerIndex]);
 
-  const close = useCallback(() => {
-    router.push(`/speakers`);
-  }, [router]);
-
   const goToSpeaker = useCallback(
     (index: number) => {
       const targetSpeaker = eventSpeakers[index];
       if (targetSpeaker) {
-        router.push(`/speakers/${targetSpeaker.id}`);
+        router.replace(`/speakers/${targetSpeaker.id}`);
       }
     },
     [router]
@@ -50,8 +46,6 @@ export default function SpeakerPage() {
         goToPrevious();
       } else if (e.key === "ArrowRight") {
         goToNext();
-      } else if (e.key === "Escape") {
-        close();
       }
     };
 
@@ -59,7 +53,7 @@ export default function SpeakerPage() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [goToPrevious, goToNext, close]);
+  }, [goToPrevious, goToNext]);
 
   useEffect(() => {
     if (id && speakerIndex === -1) {
@@ -78,22 +72,6 @@ export default function SpeakerPage() {
   return (
     <Modal>
       <div className="flex flex-col md:flex-row gap-5 items-center justify-around p-5">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="size-8 absolute top-3 right-3 hover:rotate-12 transition-all duration-150 ease-in-out cursor-pointer"
-          onClick={close}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6 18 18 6M6 6l12 12"
-          />
-        </svg>
-
         <Image
           src={speakerDetails.photo}
           alt={speakerDetails.name}

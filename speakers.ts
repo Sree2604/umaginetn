@@ -1,11 +1,11 @@
-import speaker from "@/public/speakers/speaker.jpg";
+import speakerBot from "@/public/speakers/speaker.jpg";
 
 import speaker1 from "@/public/speakers/Vishal Dhupar.jpg";
 import speaker2 from "@/public/speakers/A S Lakshminarayanan.jpg";
 import speaker3 from "@/public/speakers/Abraham K -  Photo.jpg";
 import speaker4 from "@/public/speakers/Akhil Kapoor.jpg";
 import speaker5 from "@/public/speakers/Alagu Periyannan.jpg";
-// import speaker6 from "@/public/speakers/Anand Kapoor.JPG";
+import speaker6 from "@/public/speakers/Anand Kapoor.jpeg";
 import speaker7 from "@/public/speakers/Anand Mohanram.jpg";
 import speaker8 from "@/public/speakers/Anand ramakrishnan.jpg";
 import speaker9 from "@/public/speakers/arindam banerrji.jpeg";
@@ -14,11 +14,11 @@ import speaker11 from "@/public/speakers/Ashish Vikram.jpg";
 import speaker12 from "@/public/speakers/Aswin HS2.jpg";
 import speaker13 from "@/public/speakers/Balaji Nuthalapadi photo.jpg";
 import speaker14 from "@/public/speakers/Balu chaturvedula.jpeg";
-// import speaker15 from "@/public/speakers/Bhaskar.JPG";
+import speaker15 from "@/public/speakers/Bhaskar.jpeg";
 import speaker16 from "@/public/speakers/Blair Koch.jpg";
 import speaker17 from "@/public/speakers/Charan Kumar Shetty.jpg";
 import speaker18 from "@/public/speakers/Colonel-Baljinder-Singh-Retd..jpg";
-// import speaker19 from "@/public/speakers/Con's pic.JPG";
+import speaker19 from "@/public/speakers/Con's pic.jpeg";
 import speaker20 from "@/public/speakers/Debashis_Photo.jpg";
 import speaker21 from "@/public/speakers/Dhinakaran Vinayagamurthy.jpg";
 import speaker22 from "@/public/speakers/Dinesh_Arjun.jpg";
@@ -34,15 +34,15 @@ import speaker31 from "@/public/speakers/Kaushik Dey.webp";
 import speaker32 from "@/public/speakers/Krishna Mani.jpg";
 import speaker33 from "@/public/speakers/Krishna Sai.jpg";
 import speaker34 from "@/public/speakers/Krishnaveni S - NIQ.jpg";
-// import speaker35 from "@/public/speakers/Kumar - Dexian photo.JPG";
+import speaker35 from "@/public/speakers/Kumar - Dexian photo.jpeg";
 import speaker36 from "@/public/speakers/Kumar Rangarajan.jpeg";
 import speaker37 from "@/public/speakers/Machaiah Kalengada - Photo.jpg";
 import speaker38 from "@/public/speakers/Madhan-Karky.jpg"; //
-// import speaker39 from "@/public/speakers/Manivannan Desicrew.JPG";
+import speaker39 from "@/public/speakers/Manivannan Desicrew.jpeg";
 import speaker40 from "@/public/speakers/manu-iyer.jpg";
 import speaker41 from "@/public/speakers/Mario Royston - Photo.jpeg";
 import speaker42 from "@/public/speakers/Mayuran Palanisamy.jpg";
-import speaker43 from "@/public/speakers/Mithun Sacheti.jpg"; //
+import speaker43 from "@/public/speakers/Mithun Sacheti.jpg";
 import speaker44 from "@/public/speakers/mohandass.jpg";
 import speaker45 from "@/public/speakers/Mr. Daniel Jacob - Picture.jpg";
 import speaker46 from "@/public/speakers/Mr. Debasis Panda.jpg";
@@ -61,7 +61,7 @@ import speaker58 from "@/public/speakers/Mr.Ravi Viswanathan.jpg";
 import speaker59 from "@/public/speakers/Ms. Eva James.jpg";
 import speaker60 from "@/public/speakers/Ms. Julia McCarthy.jpg";
 import speaker61 from "@/public/speakers/Ms. Vaijayanthi Srinivasaraghavan.jpeg";
-// import speaker62 from "@/public/speakers/Muthu Govindarajan Tiger Analytics.JPG";
+import speaker62 from "@/public/speakers/Muthu Govindarajan Tiger Analytics.jpeg";
 import speaker63 from "@/public/speakers/Nat_pic.jpeg";
 import speaker64 from "@/public/speakers/Naveen Chandra - Image.jpg";
 import speaker65 from "@/public/speakers/Naveen Chandra photo us.jpg";
@@ -98,7 +98,7 @@ import speaker98 from "@/public/speakers/Sopnendu Mohanty.jpg";
 import speaker99 from "@/public/speakers/Srikanth Srinivasan.jpg";
 import speaker100 from "@/public/speakers/Srikanth V.jpg";
 import speaker101 from "@/public/speakers/Srimathi Photo.jpg";
-// import speaker102 from "@/public/speakers/Srinivas Iyengar.JPG";
+import speaker102 from "@/public/speakers/Srinivas Iyengar.jpeg";
 import speaker103 from "@/public/speakers/Srinivasagopalan Rangarajan.jpg";
 import speaker104 from "@/public/speakers/Suresh Sambandam Kissflow CEO.jpeg";
 import speaker105 from "@/public/speakers/Swarna Sudha Selvaraj.jpg";
@@ -108,7 +108,6 @@ import speaker108 from "@/public/speakers/V Shankar CAMS.jpg";
 import speaker109 from "@/public/speakers/Vijayakumar C Photo.jpg";
 import speaker110 from "@/public/speakers/Vijayaraman subramanian.jpeg";
 import speaker111 from "@/public/speakers/Vijia Raghavan.jpg";
-import speaker112 from "@/public/speakers/Vishal Dhupar.jpg";
 import speaker113 from "@/public/speakers/Vishesh_Rajaram.jpeg";
 import speaker114 from "@/public/speakers/Vivek Rajah.jpg";
 import speaker115 from "@/public/speakers/Viveka Kalidasan.jpeg";
@@ -160,7 +159,7 @@ export const eventSpeakers = [
     company: "",
     role: " ",
     bio: "Anand Kapoor is the Group CIO at Straive, bringing over 25 years of experience in leading global IT operations and driving digital transformation. He leads technology initiatives across Straive's global brands, including enterprise platform implementations, cloud solutions, and robust cybersecurity frameworks. Under his leadership, Straive has strengthened IT infrastructure, adopted innovative cloud solutions, and enabled scalable processes. Anand is also passionate about mentoring early-stage startups, guiding their technology adoption and growth strategies.",
-    photo: speaker,
+    photo: speaker6,
   },
   {
     id: "7",
@@ -214,7 +213,7 @@ export const eventSpeakers = [
     id: "13",
     name: "Mr. Balaji Nuthalapadi",
     company: "Citibank",
-    role: " Managing Director & Head - South Asia Operations & Technology",
+    role: "Managing Director & Head - South Asia Operations & Technology",
     bio: "Balaji started his career with Citi in 1997 in Chennai and has since worked in several assignments across markets in APAC and EMEA.  He has worked in various roles in wealth management  in Asia, India & the UK  for over 13 years. He was the Head of  Core Operations for Citibank India’s Consumer Banking Business during the period 2012-2016.  Balaji subsequently became Head – India Citi Solutions Centres. Citi has five such centers in India housed in a legal entity called Citicorp Services India Pvt. Ltd. with over 30,000 employees. Balaji took over as Head of South Asia Operations & Technology (O&T), effective May 2021. In this role, he leads O&T for South Asia (India, Bangladesh and Sri Lanka) and continues to provide governance and leadership oversight to the Citi Solutions Centers (CSCs) in India. Personal Interests: Actively involved in BFSI and GCC industry activities, championing DEI,  giving back to the community through mentorship, and partnering in initiatives in education and fintech Balaji has done his post-graduation from IIM Ahmedabad(1996).",
     photo: speaker13,
   },
@@ -232,7 +231,7 @@ export const eventSpeakers = [
     company: "Nasscom",
     role: "Regional Director",
     bio: "Bhaskar is the Regional Director of Karnataka and Tamil Nadu at Nasscom. He focuses driving various Nasscom Forums and Initiatives for Global Capability Centers (GCC’s), IT Services, BPM and Small and Medium Enterprises (SMEs). He comes with a strong leadership and strategic planning experience. He is also Board of Director at Karnataka Digital Economy Mission (KDEM). Prior to this position he has held varied leadership positions in the IT Industry. He has worked for organisations like Accenture, Capgemini, Ikea etc. focussing on Nordics and European region. Bhaskar has written number of articles on current skill and Talent trends.",
-    photo: speaker,
+    photo: speaker15,
   },
   {
     id: "16",
@@ -264,7 +263,7 @@ export const eventSpeakers = [
     company: "Merit Group Ltd",
     role: "Managing Director",
     bio: "Cornelius (Con) is originally from Ireland and is a technology entrepreneur who has founded and managed a number of successful businesses across different cultural settings. He has lived in Chennai for almost 20 years, with his wife Natasha, and has two children. He is currently the Managing Director of Merit Group Ltd which is a market leader in big data collection and AI led data management. Con is a non-executive director in four different businesses across India and the EU, and holds a diploma in commercial computer programming and degree in Economics and Politics from University College Dublin.",
-    photo: speaker,
+    photo: speaker19,
   },
   {
     id: "20",
@@ -300,7 +299,7 @@ export const eventSpeakers = [
     photo: speaker23,
   },
   {
-    id: "24", //
+    id: "24",
     name: "Mr. G. Sundarrajan",
     company: "",
     role: "",
@@ -393,7 +392,7 @@ export const eventSpeakers = [
     company: "Dexian",
     role: "Vice President and Country Head",
     bio: "Kumar Rajagopalan exemplifies transformative leadership in his role as Vice President of Strategic Initiatives and Country Head at Dexian. With over 30 years of industry experience, Kumar has propelled Dexian into a global growth powerhouse, redefining the role of Global Capability Centers (GCCs) across international markets. His visionary strategy and pragmatic execution have driven exceptional innovation and operational excellence, positioning Dexian as a leader in its field. Kumar’s remarkable journey from finance to technology leadership underscores his adaptability and strategic insight. Initially a Chartered Accountant, he seamlessly transitioned into technology, leveraging his expertise to streamline enterprise solutions and system consolidations. His work has enhanced Dexian’s financial modeling and ERP systems, supported successful mergers, and solidified the company's market dominance. Beyond his corporate achievements, Kumar is deeply committed to Corporate Social Responsibility (CSR). His initiatives, such as the partnership with the Head Held High Foundation, address critical societal issues and empower marginalized communities. Kumar's human-centric approach fosters an inclusive and supportive work culture, balancing professional success with personal well-being. His leadership not only drives business excellence but also creates meaningful societal impact, making him a transformative force both within and beyond the corporate world.",
-    photo: speaker,
+    photo: speaker35,
   },
   {
     id: "36",
@@ -425,10 +424,10 @@ export const eventSpeakers = [
     company: "DesiCrew Solutions",
     role: "CEO",
     bio: "Manivannan J.K is the CEO of DesiCrew Solutions Pvt Ltd. DesiCrew is an IITMadras incubated company creating meaningful careers for young women and men in small towns and villages of India. With its digital operations centres established in Rural India, DesiCrew has demonstrated that World-class services can be delivered from Tier-II and Tier-III locations in India. An Alumnus of Anna University and IIM-Bangalore and the 44th All India Rank Holder in the prestigious UPSC exam, Mani has steered DesiCrew towards becoming a 1500-people strong organisation providing AI/ML services to global clients. ",
-    photo: speaker,
+    photo: speaker39,
   },
   {
-    id: "40", //
+    id: "40",
     name: "",
     company: "",
     role: "",
@@ -609,7 +608,7 @@ export const eventSpeakers = [
     company: "Tiger Analytics",
     role: "Partner and Practice Head for Data Engineering",
     bio: "Muthu is an accomplished leader with over 20 years of experience in Data Engineering, Data Science, and AI, specializing in building Data Warehouses, Big Data platforms, and Cloudbased ecosystems. Currently serving as the Partner and Practice Head for Data Engineering at Tiger Analytics, Muthu has spearheaded major initiatives in AWS, GCP, and Enterprise Data Management. He has held pivotal roles at Cognizant, including leading the Big Data Center of Excellence and overseeing the BigDecisions product. With a strong background in delivering large-scale data solutions for global clients, Muthu is passionate about driving technological innovation and building high-performing teams",
-    photo: speaker,
+    photo: speaker62,
   },
   {
     id: "63",
@@ -897,7 +896,7 @@ export const eventSpeakers = [
     company: "Happiest Minds",
     role: "Vice President - Healthcare & Life Sciences",
     bio: "Srinivas Iyengar has over 25 years of experience in the Healthcare and Technology sectors, managing businesses on a global scale. He is an active contributor and speaker at various business schools, focusing on Healthcare and Technology. Additionally, he serves as an adjunct professor at Dayananda Sagar University, where he teaches Artificial Intelligence and Digital Enterprise. A thought leader and visionary in the 'Future of Healthcare,'' Srinivas has successfully assisted clients in expanding their businesses and achieving their goals.He brings a unique blend of expertise as a technologist specializing in digital health and as a chartered accountant by qualification. Currently, Srinivas is the Head of the Healthcare & Life Sciences vertical at Happiest Minds, overseeing global operations.He also collaborates closely with affiliate companies, establishing a technology unit for SKAN, a research organization dedicated to finding solutions for neurodegenerative diseases, stroke, and the gut - brain connection. In addition, Srinivas is responsible for delivering technology solutions for Happiest Health, which aims to become India's premier healthcare organization, focusing on preventive and personalized health",
-    photo: speaker,
+    photo: speaker102,
   },
   {
     id: "103",
@@ -970,14 +969,6 @@ export const eventSpeakers = [
     role: "Head of Operations",
     bio: "Vijai Raghavan is Head of Operations, India in the EQT Private Capital Asia team. Vijai worked for BPEA from 2014 until 2022, when the company joined forces with EQT. Prior to joining BPEA, Vijai spent more than three years at Alvarez & Marsal India where he assisted private equity firms with due diligence and operational performance improvement at their portfolio companies. Prior to that, Vijai worked with McKinsey & Company and with Deloitte Consulting, both in the US, assisting clients in North America, Europe and Asia in strategy and performance improvement. Vijai holds an M.B.A. from Carnegie Mellon University and an MS in Electrical Engineering from Penn State University.",
     photo: speaker111,
-  },
-  {
-    id: "112",
-    name: "Vishal Dhupar",
-    company: "NVIDIA Asia South",
-    role: "Managing Director, Asia South",
-    bio: "Mr. Vishal Dhupar is the Managing Director for NVIDIA in South Asia, focusing on advancing the adoption of accelerated computing and AI across Indian enterprises. With over three decades of experience in the technology industry, he has led diverse teams throughout India and Asia. His career includes pivotal roles at DCM, Digital Equipment, SGI, Autodesk, Sun Microsystems, Symantec, and currently NVIDIA in India. His work has consistently propelled companies to the top of their sectors through innovation and results. Recognized by Analytics India Magazine as one of the 'Top 9 Indian Personalities in AI,' Mr. Dhupar's contributions extend to various organizations and advisory bodies such as the CII, IDGS, and the AI Committee for MeitY. He also serves as the Chairman of the Telangana AI Mission (T-AIM) and is an active member of the World Economic Forum’s AI Advisory Council in India. His past experience includes roles as Managing Director for Symantec in the India & SAARC Region, Managing Director at Autodesk Inc., Director of Sales at Sun Microsystems, Industry Sales Manager at Silicon Graphics Inc., National Sales Manager at Digital Equipment Corporation, and Territory Sales Manager at DCM Data Products in Bangalore.",
-    photo: speaker112,
   },
   {
     id: "113",

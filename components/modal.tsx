@@ -1,4 +1,5 @@
 "use client";
+
 import { useCallback, useRef, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -11,8 +12,8 @@ export default function Modal({ children }: { children: React.ReactNode }) {
   const onDismiss = useCallback(() => {
     setShowModal(false);
     setTimeout(() => {
-      router.push("/speakers");
-    });
+      router.push("/speakers", { scroll: false });
+    }, 300);
   }, [router]);
 
   const onKeyDown = useCallback(
@@ -23,12 +24,11 @@ export default function Modal({ children }: { children: React.ReactNode }) {
   );
 
   useEffect(() => {
-    const originalStyle = window.getComputedStyle(document.body).overflow;
-    document.body.style.overflow = "hidden";
     setShowModal(true);
+    document.body.style.overflow = "hidden";
 
     return () => {
-      document.body.style.overflow = originalStyle;
+      document.body.style.overflow = "";
     };
   }, []);
 
@@ -40,7 +40,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
   return (
     <div
       ref={overlay}
-      className="absolute z-50 inset-0 bg-black/60 p-2 flex items-center justify-center"
+      className="fixed z-50 inset-0 bg-black/60 p-2 flex items-center justify-center"
     >
       <div
         ref={wrapper}
@@ -48,6 +48,26 @@ export default function Modal({ children }: { children: React.ReactNode }) {
           showModal ? "scale-100 opacity-100" : "scale-85 opacity-0"
         }`}
       >
+        <button
+          className="absolute top-3 right-3 hover:rotate-12 transition-all duration-150 ease-in-out"
+          onClick={onDismiss}
+          aria-label="Close Modal"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-8 text-primary"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
         {children}
       </div>
     </div>
