@@ -1,24 +1,25 @@
 "use client";
-import { useCallback, useRef, useEffect, MouseEventHandler } from "react";
+import {
+  useCallback,
+  useRef,
+  useEffect,
+  useState,
+  MouseEventHandler,
+} from "react";
 import { useRouter } from "next/navigation";
 
 export default function Modal({ children }: { children: React.ReactNode }) {
   const overlay = useRef<HTMLDivElement | null>(null);
   const wrapper = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
+  const [showModal, setShowModal] = useState(false);
 
   const onDismiss = useCallback(() => {
-    router.push("/speakers");
+    setShowModal(false);
+    setTimeout(() => {
+      router.push("/speakers");
+    });
   }, [router]);
-
-  const onClick: MouseEventHandler = useCallback(
-    (e) => {
-      if (e.target === overlay.current || e.target === wrapper.current) {
-        if (onDismiss) onDismiss();
-      }
-    },
-    [onDismiss, overlay, wrapper]
-  );
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -30,6 +31,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const originalStyle = window.getComputedStyle(document.body).overflow;
     document.body.style.overflow = "hidden";
+    setShowModal(true);
 
     return () => {
       document.body.style.overflow = originalStyle;
@@ -45,11 +47,12 @@ export default function Modal({ children }: { children: React.ReactNode }) {
     <div
       ref={overlay}
       className="absolute z-50 inset-0 bg-black/60 p-2 flex items-center justify-center"
-      onClick={onClick}
     >
       <div
         ref={wrapper}
-        className="bg-white rounded w-11/12 lg:w-3/5 max-h-[calc(100vh-4rem)] overflow-y-auto"
+        className={`bg-white rounded w-11/12 lg:w-3/5 max-h-[calc(100vh-4rem)] overflow-y-auto transition-transform duration-300 ${
+          showModal ? "scale-100 opacity-100" : "scale-85 opacity-0"
+        }`}
       >
         {children}
       </div>

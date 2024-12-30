@@ -8,6 +8,7 @@ import { registrationLink } from "@/links";
 import Link from "next/link";
 
 const targetDate = new Date("2025-01-09T00:00:00");
+targetDate.setHours(9, 30, 0);
 
 export default function Header() {
   const [timeLeft, setTimeLeft] = useState({
