@@ -35,7 +35,7 @@ export default function EventSpeakers() {
                 />
               </svg>
             </Link>
-            <h4 className="font-bold text-xl lg:text-2xl">{speaker.name}</h4>
+            <h4 className="font-bold text-xl">{speaker.name}</h4>
             <p className="text-sm text-primary">{speaker.role}</p>
           </div>
         </AnimateUp>

@@ -22,8 +22,7 @@ export default function Navbar() {
   const routes = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    // { name: "Gallery", path: "/gallery" },
-    // { name: "Speakers", path: "/speakers" },
+    { name: "Speakers", path: "/speakers" },
     // { name: "Partners", path: "/partners" },
     // { name: "Agenda", path: "/agenda" },
   ];

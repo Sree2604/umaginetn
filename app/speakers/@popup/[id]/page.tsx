@@ -100,13 +100,10 @@ export default function SpeakerPage() {
           width={288}
           className="rounded-lg"
         />
-        <div className="text-center md:text-left">
-          <h2 className="font-bold text-2xl mb-2">{speakerDetails.name}</h2>
+        <div className="text-center md:text-left max-h-[600px] md:overflow-y-auto">
+          <h2 className="font-bold text-xl mb-2">{speakerDetails.name}</h2>
           <p className="text-primary mb-4">{speakerDetails.role}</p>
-          <p>
-            Join us in shaping the future of technology, entrepreneurship, and
-            talent mobility, contributing to the global wave of innovation.
-          </p>
+          <p>{speakerDetails.bio}</p>
         </div>
         <div className="flex w-full absolute justify-between">
           <button
