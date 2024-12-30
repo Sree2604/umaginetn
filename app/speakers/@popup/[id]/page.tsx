@@ -23,7 +23,7 @@ export default function SpeakerPage() {
     (index: number) => {
       const targetSpeaker = eventSpeakers[index];
       if (targetSpeaker) {
-        router.replace(`/speakers/${targetSpeaker.id}`);
+        router.push(`/speakers/${targetSpeaker.id}`, { scroll: false });
       }
     },
     [router]
