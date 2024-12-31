@@ -8,11 +8,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        scroll: "scroll 15s linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+
       fontFamily: {
-        neometric: ['"FSP DEMO Neometric Alt Black"', "sans-serif"], // Correctly set fallback
-        myraidpro: ['"Myraid Pro"', "sans-serif"], // Assuming MyraidPro-Regular.otf is a valid font
+        neometric: ['"FSP DEMO Neometric Alt Black"', "sans-serif"],
+        myraidpro: ['"Myraid Pro"', "sans-serif"],
       },
       scale: {
+        85: "0.85",
         65: "0.65",
         55: "0.55",
       },

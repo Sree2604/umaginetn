@@ -1,6 +1,6 @@
 import ScrollUp from "@/components/scroll-up";
 
-export default function layout(props: {
+export default function Layout(props: {
   popup: React.ReactNode;
   speakers: React.ReactNode;
 }) {

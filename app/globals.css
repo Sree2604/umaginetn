@@ -4,8 +4,16 @@
 
 @font-face {
   font-family: "FSP DEMO Neometric Alt Black";
-  src: url("/fonts/Fontspring-DEMO-neometricalt-black.otf") format("opentype"),
-    url("/fonts/MyraidPro-Regular.otf") format("opentype");
+  src: url("/fonts/Fontspring-DEMO-neometricalt-black.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("/fonts/MyraidPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

@@ -1,12 +1,12 @@
 import Navbar from "@/components/navbar";
-import Header from "./_homepage/header";
 import Footer from "@/components/footer";
-import SocialGallery from "./_homepage/social-gallery";
+import Header from "./_homepage/header";
 import KeyTracks from "./_homepage/key-tracks";
-import ScrollUp from "@/components/scroll-up";
-import EventSpeakers from "./_homepage/event-speakers";
-import AcceleratingTN from "./_homepage/accelerating-tn";
 import SocialMedia from "@/components/social-media";
+import AcceleratingTN from "./_homepage/accelerating-tn";
+import ScrollUp from "@/components/scroll-up";
+import Experience from "./_homepage/experience";
+import SocialGallery from "./_homepage/social-gallery";
 
 export default function Home() {
   return (
@@ -14,10 +14,11 @@ export default function Home() {
       <Navbar />
 
       <Header />
-      <KeyTracks />
       <AcceleratingTN />
+      <Experience />
+      <KeyTracks />
       <SocialMedia />
-      <EventSpeakers />
+
       <SocialGallery />
       <Footer />
       <ScrollUp />

@@ -2,10 +2,15 @@
 
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
-
-import Logo from "@/public/logo.webp";
 import Image from "next/image";
+
+import Logo1 from "@/public/logos/UmagineTN logo.png";
+import Logo2 from "@/public/logos/ATTN logo.png";
+import Logo3 from "@/public/logos/GOV logo.png";
+import Logo4 from "@/public/logos/ELCOT logo.png";
+
 import { registrationLink } from "@/links";
+import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +23,8 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Speakers", path: "/speakers" },
-    { name: "Schedule", path: "/schedule" },
+    // { name: "Partners", path: "/partners" },
+    // { name: "Agenda", path: "/agenda" },
   ];
 
   const controlNavbar = useCallback(() => {
@@ -36,6 +42,12 @@ export default function Navbar() {
       setMenuOpen(false);
     }
   }, []);
+
+  const pushToDataLayer = (event: object) => {
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push(event);
+    }
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -59,61 +71,75 @@ export default function Navbar() {
         ref={menuRef}
         className={`${
           scrolled
-            ? "fixed top-0 left-0 w-full bg-white text-black shadow-md"
-            : "relative md:absolute w-full"
-        } transform transition-transform duration-500 ease-in-out z-40`}
+            ? "fixed top-0 left-0 bg-white text-black shadow-md"
+            : "relative md:absolute "
+        } transform transition-transform w-full duration-500 ease-in-out z-40 px-2 lg:p-1 flex justify-between md:justify-around items-center`}
       >
-        <div className="flex justify-around items-center py-4">
-          <Image src={Logo} alt="logo" className="h-12 w-44" />
-          <ul className="hidden md:flex items-center gap-8">
-            {routes.map(({ name, path }) => (
-              <li
-                key={name}
-                className={`${
-                  pathname === path
-                    ? "text-primary "
-                    : "text-gray-700 hover:text-primary"
-                } transition-colors font-semibold duration-200`}
-              >
-                <a href={path}>{name}</a>
-              </li>
-            ))}
-            <li>
-              <a
-                href={registrationLink}
-                target="_blank"
-                className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out"
-              >
-                Register
-              </a>
-            </li>
-          </ul>
-          <div
-            className={`md:hidden p-2 rounded bg-primary text-white transition-all duration-200 ease-in-out ${
-              menuOpen ? "border-2 border-red-400" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
+        <Link
+          href={"/"}
+          className="flex flex-row gap-3 items-center scale-75 lg:scale-95"
+        >
+          <Image src={Logo1} alt="logo" width={80} style={{ height: "auto" }} />
+          <Image src={Logo2} alt="logo" width={55} style={{ height: "auto" }} />
+          <Image src={Logo3} alt="logo" width={55} style={{ height: "auto" }} />
+          <Image src={Logo4} alt="logo" width={55} style={{ height: "auto" }} />
+        </Link>
+
+        <ul className="hidden md:flex items-center gap-3 lg:gap-8">
+          {routes.map(({ name, path }) => (
+            <li
+              key={name}
+              className={`${
+                pathname === path
+                  ? "text-primary "
+                  : "text-gray-700 hover:text-primary"
+              } transition-colors font-semibold lg:text-lg duration-200`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </div>
+              <Link href={path}>{name}</Link>
+            </li>
+          ))}
+          <li>
+            <Link
+              href={registrationLink}
+              className="p-2 px-4 bg-primary hover:bg-secondary rounded text-white font-semibold transition-colors duration-200 ease-in-out"
+              onClick={() =>
+                pushToDataLayer({
+                  event: "registration_click",
+                  category: "CTA",
+                  action: "Click",
+                  label: "Register Button",
+                })
+              }
+            >
+              Register
+            </Link>
+          </li>
+        </ul>
+        <div
+          className={`md:hidden p-2 rounded bg-primary text-white transition-all duration-200 ease-in-out ${
+            menuOpen ? "border-2 border-red-400" : ""
+          }`}
+          onClick={toggleMenu}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
         </div>
       </div>
       <div
         className={`md:hidden fixed top-24 left-1/2 w-11/12 z-40 transform -translate-x-1/2 bg-white p-5 rounded shadow-lg transition-transform duration-500 ease-in-out ${
-          menuOpen ? "translate-y-0 opacity-100" : "-translate-y-72 opacity-0"
+          menuOpen ? "translate-y-0 opacity-100" : "-translate-y-96 opacity-0"
         }`}
       >
         <ul className="flex flex-col items-center gap-4">
@@ -126,7 +152,7 @@ export default function Navbar() {
                   : "text-gray-700"
               } transition-colors duration-200`}
             >
-              <a href={path}>{name}</a>
+              <Link href={path}>{name}</Link>
             </li>
           ))}
         </ul>
