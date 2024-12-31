@@ -9,7 +9,6 @@ import {
   youtubeLink,
 } from "@/links";
 
-
 import Venue from "@/public/venue.jpg";
 import bg1 from "@/public/footer.jpg";
 import bg2 from "@/public/redKeys.jpg";
@@ -184,17 +183,6 @@ export default function Footer() {
             </li>
           ))}
         </ul>
-<<<<<<< HEAD
-
-        <ul className="flex gap-5">
-          {routes.map(({ name, path }) => (
-            <li key={name} className="hover:text-primary font-semibold">
-              <a href={path}>{name}</a>
-            </li>
-          ))}
-        </ul>
-=======
->>>>>>> b65a75364120e761fc74927b257b665c10296313
         <p>@2025 Umagine. All rights reserved</p>
       </div>
     </div>
