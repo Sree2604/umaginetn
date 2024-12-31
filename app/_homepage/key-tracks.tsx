@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import key1 from "@/public/key1.webp";
-import key2 from "@/public/key2.webp";
-import key3 from "@/public/key3.webp";
-=======
 import AnimateUp from "@/components/animate-up";
 import key1 from "@/public/key1.svg";
 import key2 from "@/public/key2.svg";
 import key3 from "@/public/key3.svg";
->>>>>>> b65a75364120e761fc74927b257b665c10296313
 import Image from "next/image";
 
 const keyTracksData = [
